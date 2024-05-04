@@ -1,0 +1,25 @@
+.navlink {
+  display: flex;
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
+  border-radius: var(--mantine-radius-md);
+  font-weight: 500;
+  margin-bottom: var(--mantine-spacing-xs);
+  align-items: center;
+  gap: var(--mantine-spacing-xs);
+  color: light-dark(var(--mantine-color-dark-6), var(--mantine-color-gray-0));
+  text-decoration: none;
+
+  @mixin hover {
+    background-color: light-dark(
+      var(--mantine-color-gray-2),
+      var(--mantine-color-dark-6)
+    );
+  }
+}
+
+.active_navlink {
+  background-color: light-dark(
+    var(--mantine-color-gray-2),
+    var(--mantine-color-dark-6)
+  );
+}
