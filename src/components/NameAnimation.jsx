@@ -40,7 +40,7 @@ const NameAnimation = () => {
 
   return (
     <Group h="50px" align="center" mb={{ base: "md", sm: "lg" }}>
-      <Title>👋</Title>
+      <Title fz={{ base: "h3", sm: "h2", md: "h1" }}>👋</Title>
       <Title
         ref={greetingRef}
         fw={500}
