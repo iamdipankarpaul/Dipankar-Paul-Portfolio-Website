@@ -1,10 +1,13 @@
-import { AppShell } from "@mantine/core";
+import { Outlet } from "react-router-dom";
+import { AppShell, Box, Text } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 
-import { Outlet } from "react-router-dom";
-
-import Navlinks from "./Navlinks";
+// components
+import AppNavbar from "./AppNavbar";
 import AppHeader from "./AppHeader";
+
+// constants
+import { navLinks, socialLinks } from "../constants";
 
 const AppLayout = () => {
   const [opened, { toggle: toggleNavbar, close: closeNavbar }] =
@@ -22,7 +25,11 @@ const AppLayout = () => {
       </AppShell.Header>
       {/* navbar */}
       <AppShell.Navbar p="md">
-        <Navlinks closeNavbar={closeNavbar} />
+        <Box>
+          <AppNavbar links={navLinks} closeNavbar={closeNavbar} />
+          <Text pb="xs" c="dimmed">WHERE TO FIND ME</Text>
+          <AppNavbar links={socialLinks} closeNavbar={closeNavbar} />
+        </Box>
       </AppShell.Navbar>
       {/* main */}
       <AppShell.Main>
