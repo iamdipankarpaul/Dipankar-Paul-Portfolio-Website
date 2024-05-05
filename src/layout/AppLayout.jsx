@@ -16,7 +16,11 @@ const AppLayout = () => {
   return (
     <AppShell
       header={{ height: 60 }}
-      navbar={{ width: 300, breakpoint: "sm", collapsed: { mobile: !opened } }}
+      navbar={{
+        width: { base: 200, md: 250 },
+        breakpoint: "sm",
+        collapsed: { mobile: !opened },
+      }}
       padding="md"
     >
       {/* header */}
@@ -27,7 +31,9 @@ const AppLayout = () => {
       <AppShell.Navbar p="md">
         <Box>
           <AppNavbar links={navLinks} closeNavbar={closeNavbar} />
-          <Text pb="xs" c="dimmed">WHERE TO FIND ME</Text>
+          <Text pb="xs" c="dimmed">
+            WHERE TO FIND ME
+          </Text>
           <AppNavbar links={socialLinks} closeNavbar={closeNavbar} />
         </Box>
       </AppShell.Navbar>
