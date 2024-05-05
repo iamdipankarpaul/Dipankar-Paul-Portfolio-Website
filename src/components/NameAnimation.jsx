@@ -1,51 +1,23 @@
-import { useRef } from "react";
-import { gsap } from "gsap";
-import { TextPlugin } from "gsap/all";
-import { useGSAP } from "@gsap/react";
 import { Group, Title } from "@mantine/core";
-
-gsap.registerPlugin(useGSAP);
-gsap.registerPlugin(TextPlugin);
+import { TypeAnimation } from "react-type-animation";
 
 const NameAnimation = () => {
-  const greetingRef = useRef(null);
-  const greetings = [
-    "👋 Hello, I'm Dipankar Paul",
-    "👋 नमस्ते, मैं दीपंकर पौल हूँ",
-    "👋 নমস্কার, আমি দীপঙ্কর পাল",
-  ];
-  let currentIndex = 0;
-
-  useGSAP(() => {
-    const animateGreeting = () => {
-      gsap.to(greetingRef.current, {
-        duration: 1.5,
-        text: greetings[currentIndex],
-        repeat: 1,
-        yoyo: true,
-        onComplete: () => {
-          currentIndex = (currentIndex + 1) % greetings.length;
-        },
-      });
-    };
-
-    animateGreeting();
-
-    const intervalId = setInterval(() => {
-      animateGreeting();
-    }, 4000);
-
-    return () => clearInterval(intervalId);
-  }, []);
-
   return (
     <Group h="50px" align="center" mb={{ base: "md", sm: "lg" }}>
-      <Title
-        // ref={greetingRef}
-        fw={500}
-        fz={{ base: "h2", sm: "h1" }}
-      >
-        👋 Hello, I'm Dipankar Paul
+      <Title fw={500} fz={{ base: "h2", sm: "h1" }}>
+        {/* 👋 Hello, I'm Dipankar Paul */}
+        <TypeAnimation
+          sequence={[
+            "👋 Hello, I'm Dipankar Paul",
+            1000,
+            "👋 नमस्ते, मैं दीपंकर पौल हूँ",
+            1000,
+            "👋 নমস্কার, আমি দীপঙ্কর পাল",
+            1000,
+          ]}
+          speed={50}
+          repeat={Infinity}
+        />
       </Title>
     </Group>
   );
