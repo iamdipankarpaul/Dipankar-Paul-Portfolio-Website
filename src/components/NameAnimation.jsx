@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/all";
 import { useGSAP } from "@gsap/react";
-import { Box, Group, Title } from "@mantine/core";
+import { Group, Title } from "@mantine/core";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(TextPlugin);
@@ -10,16 +10,16 @@ gsap.registerPlugin(TextPlugin);
 const NameAnimation = () => {
   const greetingRef = useRef(null);
   const greetings = [
-    "Hello, I'm Dipankar Paul.",
-    "नमस्ते, मैं दीपंकर पौल हूँ।",
-    "নমস্কার, আমি দীপঙ্কর পাল।",
+    "👋 Hello, I'm Dipankar Paul",
+    "👋 नमस्ते, मैं दीपंकर पौल हूँ",
+    "👋 নমস্কার, আমি দীপঙ্কর পাল",
   ];
   let currentIndex = 0;
 
   useGSAP(() => {
     const animateGreeting = () => {
       gsap.to(greetingRef.current, {
-        duration: 1,
+        duration: 1.5,
         text: greetings[currentIndex],
         repeat: 1,
         yoyo: true,
@@ -33,19 +33,14 @@ const NameAnimation = () => {
 
     const intervalId = setInterval(() => {
       animateGreeting();
-    }, 3000);
+    }, 4000);
 
     return () => clearInterval(intervalId);
   }, []);
 
   return (
     <Group h="50px" align="center" mb={{ base: "md", sm: "lg" }}>
-      <Title fz={{ base: "h3", sm: "h2", md: "h1" }}>👋</Title>
-      <Title
-        ref={greetingRef}
-        fw={500}
-        fz={{ base: "h3", sm: "h2", md: "h1" }}
-      ></Title>
+      <Title ref={greetingRef} fw={500} fz={{ base: "h2", sm: "h1" }}></Title>
     </Group>
   );
 };

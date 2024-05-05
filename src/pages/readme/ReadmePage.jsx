@@ -14,8 +14,11 @@ const ReadmePage = () => {
       <Topbar label="README.md" />
       {/* body */}
       <Box p={{ base: "sm", sm: "md", md: "lg", lg: "xl" }}>
-        <NameAnimation />
-        <Text size="xl">A Frontend Developer and Blog Writer.</Text>
+        <Box mb="sm">
+          <NameAnimation />
+          <Divider mb="sm" />
+          <Text size="lg">A Frontend Developer and Blog Writer.</Text>
+        </Box>
 
         <SectionTitle text="💻 What I Do" />
         <Text size="lg">

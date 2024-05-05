@@ -1,14 +1,17 @@
-import { Title } from "@mantine/core";
+import { Title, Divider, Box } from "@mantine/core";
 
 const SectionTitle = ({ text }) => {
   return (
-    <Title
-      fw={500}
-      fz={{ base: "h3", sm: "h2", md: "h1" }}
-      my={{ base: "md", sm: "lg" }}
-    >
-      {text}
-    </Title>
+    <Box mb="sm">
+      <Title
+        fw={500}
+        fz={{ base: "h2", sm: "h1" }}
+        my={{ base: "md", sm: "lg" }}
+      >
+        {text}
+      </Title>
+      <Divider />
+    </Box>
   );
 };
 
