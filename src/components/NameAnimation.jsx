@@ -40,7 +40,13 @@ const NameAnimation = () => {
 
   return (
     <Group h="50px" align="center" mb={{ base: "md", sm: "lg" }}>
-      <Title ref={greetingRef} fw={500} fz={{ base: "h2", sm: "h1" }}></Title>
+      <Title
+        // ref={greetingRef}
+        fw={500}
+        fz={{ base: "h2", sm: "h1" }}
+      >
+        👋 Hello, I'm Dipankar Paul
+      </Title>
     </Group>
   );
 };

@@ -1,9 +1,10 @@
 import { Group, Title, Divider } from "@mantine/core";
 
-const Topbar = ({ label }) => {
+const Topbar = ({ label, icon }) => {
   return (
     <>
-      <Group p="xs">
+      <Group p="xs" gap="xs">
+        {icon}
         <Title fz="h4" fw={500}>
           {label}
         </Title>
