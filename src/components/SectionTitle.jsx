@@ -1,22 +1,19 @@
-import { Title, Divider, Box } from "@mantine/core";
-import { useHover } from "@mantine/hooks";
+import { Title, Box, Flex } from "@mantine/core";
+import { useHover, useMediaQuery } from "@mantine/hooks";
+import { Link, Hash } from "@phosphor-icons/react";
 
 const SectionTitle = ({ text }) => {
-  const { hovered, ref: sectionTitleRef } = useHover();
+  const { hovered, ref } = useHover();
+  const isMobile = useMediaQuery("(max-width: 48em)");
+
   return (
-    <Box mb="sm">
-      <Title
-        ref={sectionTitleRef}
-        fw={500}
-        fz={{ base: "h2", sm: "h1" }}
-        my={{ base: "md", sm: "lg" }}
-        style={{ textDecoration: hovered ? "underline" : "none",
-          textUnderlinePosition: "under"
-         }}
-      >
-        {text}
-      </Title>
-      <Divider />
+    <Box>
+      <Flex align="center" ref={ref} gap="10px">
+        {!isMobile && <Hash size={20} style={{ opacity: hovered ? 1 : 0 }} />}
+        <Title fw={500} fz={{ base: "h2", sm: "h1" }} py={"xs"}>
+          {text}
+        </Title>
+      </Flex>
     </Box>
   );
 };

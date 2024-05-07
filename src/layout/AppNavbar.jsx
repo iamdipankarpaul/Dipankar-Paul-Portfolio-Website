@@ -6,9 +6,8 @@ const AppNavbar = ({ links, closeNavbar }) => {
   return (
     <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
       {links.map((item) => (
-        <li>
+        <li key={item.id}>
           <NavLink
-            key={item.id}
             to={item.to}
             onClick={closeNavbar}
             className={({ isActive }) =>

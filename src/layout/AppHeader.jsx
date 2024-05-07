@@ -26,6 +26,7 @@ const AppHeader = ({ opened, toggleNavbar }) => {
         <Tooltip label="Toggle theme" position="bottom-end">
           <ActionIcon
             variant="default"
+            size='lg'
             onClick={() =>
               setColorScheme(computedColorScheme === "light" ? "dark" : "light")
             }

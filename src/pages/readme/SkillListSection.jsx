@@ -1,10 +1,10 @@
 import { Box, Flex, Title } from "@mantine/core";
 import SkillsImage from "../../components/SkillsImage";
-import { skillList } from "../../constants/constants";
+// import { skillList } from "../../constants/constants";
 
-const SkillListSection = () => {
+const SkillListSection = ({skillList}) => {
   const items = Object.keys(skillList).map((key) => (
-    <Flex direction="column" gap="sm" mb="sm">
+    <Flex direction="column" gap="sm" mb="sm" key={key}>
       <Title fz={{ base: "h3", sm: "h2" }} tt="capitalize">
         {key}
       </Title>
