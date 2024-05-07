@@ -17,12 +17,16 @@ const ReadmePage = () => {
     <Box className={classes.wrapper}>
       <Topbar label="README.md" icon={<BookOpen size={24} />} />
       {/* body */}
-      <Box py={{ base: "sm", sm: "md", md: "lg", lg: "xl" }} px="xs">
+      <Box
+        py={{ base: "sm", sm: "md", md: "lg", lg: "xl" }}
+        pl="xs"
+        pr={{ base: "xs", sm: "md" }}
+      >
         <section aria-label="Readme header section">
-          <Box pl={{ base: 0, sm: "xl" }}>
+          <Box pl={{ base: 0, sm: "lg" }}>
             <NameAnimation />
           </Box>
-          <Box pl={{ base: 0, sm: "xl" }}>
+          <Box pl={{ base: 0, sm: "lg" }}>
             <Divider mb="sm" size="sm" />
             <Text fz="xl">A Frontend Developer and Blog Writer.</Text>
           </Box>

@@ -19,14 +19,13 @@ const AppHeader = ({ opened, toggleNavbar }) => {
 
   return (
     <Group h="100%" px="md" justify="space-between">
-      <Title fz={{ base: "h2", sm: "h1" }} fw="700">
+      <Title fz="h2" fw="700">
         Dipankar Paul
       </Title>
       <Group>
         <Tooltip label="Toggle theme" position="bottom-end">
           <ActionIcon
             variant="default"
-            size='lg'
             onClick={() =>
               setColorScheme(computedColorScheme === "light" ? "dark" : "light")
             }
