@@ -19,7 +19,7 @@ const AppHeader = ({ opened, toggleNavbar }) => {
 
   return (
     <Group h="100%" px="md" justify="space-between">
-      <Title fz={{ base: "h3", sm: "h2" }} fw="700">
+      <Title fz={{ base: "h2", sm: "h1" }} fw="700">
         Dipankar Paul
       </Title>
       <Group>

@@ -7,8 +7,8 @@ const ReadmeSection = ({ titleText, bodyContent, skillList }) => {
     <section aria-label={`${titleText} section`} style={{ marginTop: "20px" }}>
       <Box>
         <SectionTitle text={titleText} />
-        <Divider size="sm" />
-        <Box pl={{ base: 0, sm: "xl" }} mt="sm">
+        <Box pl={{ base: 0, sm: "xl" }}>
+          <Divider size="sm" mb="sm" />
           {bodyContent && <Text fz="lg">{bodyContent}</Text>}
           {skillList && <SkillListSection skillList={skillList} />}
         </Box>

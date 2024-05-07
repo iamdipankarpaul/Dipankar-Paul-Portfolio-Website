@@ -19,9 +19,13 @@ const ReadmePage = () => {
       {/* body */}
       <Box py={{ base: "sm", sm: "md", md: "lg", lg: "xl" }} px="xs">
         <section aria-label="Readme header section">
-          <NameAnimation />
-          <Divider mb="sm" size="sm" />
-          <Text fz="xl">A Frontend Developer and Blog Writer.</Text>
+          <Box pl={{ base: 0, sm: "xl" }}>
+            <NameAnimation />
+          </Box>
+          <Box pl={{ base: 0, sm: "xl" }}>
+            <Divider mb="sm" size="sm" />
+            <Text fz="xl">A Frontend Developer and Blog Writer.</Text>
+          </Box>
         </section>
 
         <ReadmeSection
