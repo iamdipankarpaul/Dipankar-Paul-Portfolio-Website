@@ -10,7 +10,7 @@ import Topbar from "../../components/Topbar";
 import NameAnimation from "../../components/NameAnimation";
 import ReadmeSection from "./ReadmeSection";
 
-import { skillList } from "../../constants/constants";
+import { personalData } from "../../constants";
 
 const ReadmePage = () => {
   return (
@@ -19,8 +19,8 @@ const ReadmePage = () => {
       {/* body */}
       <Box
         py={{ base: "sm", sm: "md", md: "lg", lg: "xl" }}
-        pl="xs"
         pr={{ base: "xs", sm: "md" }}
+        pl="xs"
       >
         <section aria-label="Readme header section">
           <Box pl={{ base: 0, sm: "lg" }}>
@@ -28,31 +28,24 @@ const ReadmePage = () => {
           </Box>
           <Box pl={{ base: 0, sm: "lg" }}>
             <Divider mb="sm" size="sm" />
-            <Text fz="xl">A Frontend Developer and Blog Writer.</Text>
+            <Text fz="xl">{personalData.designation}</Text>
           </Box>
         </section>
 
         <ReadmeSection
-          titleText="What I Do"
-          bodyContent="I design and develop user interfaces that are not only visually
-              appealing but also functional and user-friendly. My skills in
-              frontend technologies allow me to create responsive websites and
-              web applications that work seamlessly across devices. I also enjoy
-              sharing my knowledge and insights through my blogs on dev.to,
-              where I write about Rust tutorials."
+          titleText={personalData.about.whatIDo.title}
+          bodyContent={personalData.about.whatIDo.description}
         />
 
         <ReadmeSection
-          titleText="My Approach"
-          bodyContent="I'm passionate about continuous learning and staying updated with
-          the latest trends and technologies in the frontend development
-          space. I approach each project with enthusiasm and a commitment to
-          delivering high-quality results. Additionally, I'm currently
-          expanding my skills into backend development, broadening my
-          expertise in creating full-stack applications."
+          titleText={personalData.about.myApproach.title}
+          bodyContent={personalData.about.myApproach.description}
         />
 
-        <ReadmeSection titleText="My Approach" skillList={skillList} />
+        <ReadmeSection
+          titleText={personalData.skills.title}
+          skillList={personalData.skills.skillList}
+        />
       </Box>
     </Box>
   );

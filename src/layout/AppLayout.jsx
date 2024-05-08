@@ -7,7 +7,7 @@ import AppNavbar from "./AppNavbar";
 import AppHeader from "./AppHeader";
 
 // constants
-import { navLinks, socialLinks } from "../constants/constants";
+import { navLinks, socialLinks } from "../constants";
 
 const AppLayout = () => {
   const [opened, { toggle: toggleNavbar, close: closeNavbar }] =
