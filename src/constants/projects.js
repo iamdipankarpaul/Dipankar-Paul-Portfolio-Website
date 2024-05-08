@@ -83,7 +83,12 @@ const projects = [
       github: "https://github.com/dipankarpaul2k/Wordinary.git",
     },
     slug: "wordinary",
-    images: ["", "", "", ""],
+    images: [
+      "https://res.cloudinary.com/dysni0qfj/image/upload/v1715191994/Wordinary/Wordinary-1_evbt85.png",
+      "https://res.cloudinary.com/dysni0qfj/image/upload/v1715191996/Wordinary/Wordinary-2_iyolgq.png",
+      "https://res.cloudinary.com/dysni0qfj/image/upload/v1715191992/Wordinary/Wordinary-3_qk1ikj.png",
+      "https://res.cloudinary.com/dysni0qfj/image/upload/v1715191990/Wordinary/Wordinary-4_ijsaeu.png",
+    ],
   },
   {
     title: "HomeBudget",
