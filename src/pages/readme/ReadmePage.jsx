@@ -10,7 +10,8 @@ import Topbar from "../../components/Topbar";
 import NameAnimation from "../../components/NameAnimation";
 import ReadmeSection from "./ReadmeSection";
 
-import { personalData } from "../../constants";
+// constants
+import personalData from "../../constants";
 
 const ReadmePage = () => {
   return (
@@ -32,15 +33,13 @@ const ReadmePage = () => {
           </Box>
         </section>
 
-        <ReadmeSection
-          titleText={personalData.about.whatIDo.title}
-          bodyContent={personalData.about.whatIDo.description}
-        />
-
-        <ReadmeSection
-          titleText={personalData.about.myApproach.title}
-          bodyContent={personalData.about.myApproach.description}
-        />
+        {personalData.aboutMe.map((about) => (
+          <ReadmeSection
+            key={about.id}
+            titleText={about.title}
+            bodyContent={about.description}
+          />
+        ))}
 
         <ReadmeSection
           titleText={personalData.skills.title}

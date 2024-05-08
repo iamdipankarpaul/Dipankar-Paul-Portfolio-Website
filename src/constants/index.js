@@ -1,196 +1,24 @@
-import { randomId } from "@mantine/hooks";
-import {
-  ArrowUpRight,
-  Article,
-  BookOpen,
-  CodepenLogo,
-  DevToLogo,
-  Folder,
-  GithubLogo,
-  LinkedinLogo,
-  PaperPlaneTilt,
-} from "@phosphor-icons/react";
+import aboutMe from "./aboutMe";
+import projects from "./projects";
+import skillList from "./skillList";
+import socialLinks from "./socialLinks";
 
-export const navLinks = [
-  {
-    id: randomId(),
-    to: "/",
-    label: "README.md",
-    leftIcon: BookOpen,
-  },
-  {
-    id: randomId(),
-    to: "/projects",
-    label: "Projects",
-    leftIcon: Folder,
-  },
-  {
-    id: randomId(),
-    to: "/blogs",
-    label: "Blogs",
-    leftIcon: Article,
-  },
-  {
-    id: randomId(),
-    to: "/contact",
-    label: "Contact Me",
-    leftIcon: PaperPlaneTilt,
-  },
-];
-
-export const socialLinks = [
-  {
-    id: randomId(),
-    to: "https://www.linkedin.com/in/iamdipankarpaul/",
-    label: "LinkedIn",
-    leftIcon: LinkedinLogo,
-    rightIcon: ArrowUpRight,
-    target: "_blank",
-  },
-  {
-    id: randomId(),
-    to: "https://github.com/dipankarpaul2k",
-    label: "GitHub",
-    leftIcon: GithubLogo,
-    rightIcon: ArrowUpRight,
-    target: "_blank",
-  },
-  {
-    id: randomId(),
-    to: "https://codepen.io/dipankarpaul2k",
-    label: "CodePen",
-    leftIcon: CodepenLogo,
-    rightIcon: ArrowUpRight,
-    target: "_blank",
-  },
-  {
-    id: randomId(),
-    to: "https://dev.to/dipankarpaul",
-    label: "Dev.to",
-    leftIcon: DevToLogo,
-    rightIcon: ArrowUpRight,
-    target: "_blank",
-  },
-];
-
-export const skillList = {
-  languages: [
-    {
-      src: "https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=HTML5&logoColor=white",
-      alt: "html image",
-      id: randomId(),
-    },
-    {
-      src: "https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=CSS3&logoColor=white",
-      alt: "css image",
-      id: randomId(),
-    },
-    {
-      src: "https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black",
-      alt: "javascript image",
-      id: randomId(),
-    },
-  ],
-  frontend: [
-    {
-      src: "https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black",
-      alt: "reactjs image",
-      id: randomId(),
-    },
-    {
-      src: "https://img.shields.io/badge/React%20Router-CA4245.svg?style=for-the-badge&logo=React-Router&logoColor=white",
-      alt: "react router dom image",
-      id: randomId(),
-    },
-    {
-      src: "https://img.shields.io/badge/Redux-764ABC.svg?style=for-the-badge&logo=Redux&logoColor=white",
-      alt: "redux image",
-      id: randomId(),
-    },
-    {
-      src: "https://img.shields.io/badge/MUI-007FFF.svg?style=for-the-badge&logo=MUI&logoColor=white",
-      alt: "mui image",
-      id: randomId(),
-    },
-    {
-      src: "https://img.shields.io/badge/Mantine-339AF0.svg?style=for-the-badge&logo=Mantine&logoColor=white",
-      alt: "mantine image",
-      id: randomId(),
-    },
-    {
-      src: "https://img.shields.io/badge/Tailwind%20CSS-06B6D4.svg?style=for-the-badge&logo=Tailwind-CSS&logoColor=white",
-      alt: "tailwind css image",
-      id: randomId(),
-    },
-    {
-      src: "https://img.shields.io/badge/Bootstrap-7952B3.svg?style=for-the-badge&logo=Bootstrap&logoColor=white",
-      alt: "bootstrap image",
-      id: randomId(),
-    },
-  ],
-  backend: [
-    {
-      src: "https://img.shields.io/badge/Node.js-5FA04E.svg?style=for-the-badge&logo=nodedotjs&logoColor=white",
-      alt: "nodejs image",
-      id: randomId(),
-    },
-    {
-      src: "https://img.shields.io/badge/Express-000000.svg?style=for-the-badge&logo=Express&logoColor=white",
-      alt: "express image",
-      id: randomId(),
-    },
-    {
-      src: "https://img.shields.io/badge/MongoDB-47A248.svg?style=for-the-badge&logo=MongoDB&logoColor=white",
-      alt: "mongodb image",
-      id: randomId(),
-    },
-    {
-      src: "https://img.shields.io/badge/Mongoose-880000.svg?style=for-the-badge&logo=Mongoose&logoColor=white",
-      alt: "mongoose image",
-      id: randomId(),
-    },
-    {
-      src: "https://img.shields.io/badge/Nodemon-76D04B.svg?style=for-the-badge&logo=Nodemon&logoColor=white",
-      alt: "nodemon image",
-      id: randomId(),
-    },
-  ],
-  hosting: [
-    {
-      src: "https://img.shields.io/badge/Netlify-00C7B7.svg?style=for-the-badge&logo=Netlify&logoColor=white",
-      alt: "netlify image",
-      id: randomId(),
-    },
-    {
-      src: "https://img.shields.io/badge/Vercel-000000.svg?style=for-the-badge&logo=Vercel&logoColor=white",
-      alt: "vercel image",
-      id: randomId(),
-    },
-  ],
-};
-
-export const personalData = {
+const personalData = {
   name: "Dipankar Paul",
   designation: "A Frontend Developer and Blog Writer.",
   email: "dipankarpaul.dev@gmail.com",
-  phone: "+91-6296793396",
-  about: {
-    whatIDo: {
-      title: "What I Do",
-      description:
-        "I design and develop user interfaces that are not only visually appealing but also functional and user-friendly. My skills in frontend technologies allow me to create responsive websites and web applications that work seamlessly across devices. I also enjoy sharing my knowledge and insights through my blogs on dev.to, where I write about Rust tutorials",
-    },
-    myApproach: {
-      title: "My Approach",
-      description:
-        "I'm passionate about continuous learning and staying updated with the latest trends and technologies in the frontend development space. I approach each project with enthusiasm and a commitment to delivering high-quality results. Additionally, I'm currently expanding my skills into backend development, broadening my expertise in creating full-stack applications.",
-    },
+  phone: {
+    countryCode: "91",
+    mobileNumber: "6296793396",
   },
+  aboutMe,
   skills: {
     title: "Skills & Tech",
     skillList,
   },
   socialLinks,
+  projects,
   resume: "...",
-  projects: [],
 };
+
+export default personalData;

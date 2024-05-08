@@ -7,7 +7,8 @@ import AppNavbar from "./AppNavbar";
 import AppHeader from "./AppHeader";
 
 // constants
-import { navLinks, socialLinks } from "../constants";
+import personalData from "../constants";
+import navLinks from "../constants/navLinks";
 
 const AppLayout = () => {
   const [opened, { toggle: toggleNavbar, close: closeNavbar }] =
@@ -34,7 +35,10 @@ const AppLayout = () => {
           <Text pb="xs" c="dimmed">
             WHERE TO FIND ME
           </Text>
-          <AppNavbar links={socialLinks} closeNavbar={closeNavbar} />
+          <AppNavbar
+            links={personalData.socialLinks}
+            closeNavbar={closeNavbar}
+          />
         </Box>
       </AppShell.Navbar>
       {/* main */}
