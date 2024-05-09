@@ -17,7 +17,7 @@ const AppNavbar = ({ links, closeNavbar }) => {
             }
             target={item.target}
           >
-            <Group>
+            <Group gap="xs">
               <item.leftIcon size={24} />
               <Text span>{item.label}</Text>
             </Group>

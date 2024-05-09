@@ -33,6 +33,7 @@ const projects = [
       "https://res.cloudinary.com/dysni0qfj/image/upload/v1713428699/ReAPI%20Client%20Project/ReAPI_Client_history.png",
       "https://res.cloudinary.com/dysni0qfj/image/upload/v1713428699/ReAPI%20Client%20Project/ReAPI_Client_code_snippet.png",
     ],
+    date: "2024-04-10",
   },
   {
     title: "ReTube",
@@ -58,6 +59,7 @@ const projects = [
       "https://res.cloudinary.com/dysni0qfj/image/upload/v1714926735/Retube/retube-nine-2.png",
       "https://res.cloudinary.com/dysni0qfj/image/upload/v1714926730/Retube/retube-nine-3.png",
     ],
+    date: "2024-03-10",
   },
   {
     title: "Wordinary",
@@ -89,6 +91,7 @@ const projects = [
       "https://res.cloudinary.com/dysni0qfj/image/upload/v1715191992/Wordinary/Wordinary-3_qk1ikj.png",
       "https://res.cloudinary.com/dysni0qfj/image/upload/v1715191990/Wordinary/Wordinary-4_ijsaeu.png",
     ],
+    date: "2024-01-10",
   },
   {
     title: "HomeBudget",
@@ -112,6 +115,7 @@ const projects = [
       "https://res.cloudinary.com/dysni0qfj/image/upload/v1714927066/HomeBudget%20app/homebudget-3.png",
       "https://res.cloudinary.com/dysni0qfj/image/upload/v1714927070/HomeBudget%20app/homebudget-4.png",
     ],
+    date: "2023-12-10",
   },
   {
     title: "Password Generator",
@@ -133,6 +137,7 @@ const projects = [
     images: [
       "https://res.cloudinary.com/dysni0qfj/image/upload/v1715191462/password%20generator/password-generator_idr69h.png",
     ],
+    date: "2023-11-10",
   },
   {
     title: "Text to Speech App",
@@ -153,6 +158,7 @@ const projects = [
     images: [
       "https://res.cloudinary.com/dysni0qfj/image/upload/v1715191485/text%20to%20speech%20app/text-to-speech-app_a0zaph.png",
     ],
+    date: "2023-10-10",
   },
   {
     title: "Cynthia Ugwu Website Clone",
@@ -175,6 +181,7 @@ const projects = [
       "https://res.cloudinary.com/dysni0qfj/image/upload/v1715191270/Landing%20Pages/cynthia-ugwu-2.png",
       "https://res.cloudinary.com/dysni0qfj/image/upload/v1715191270/Landing%20Pages/cynthia-ugwu-3.png",
     ],
+    date: "2023-09-10",
   },
 ];
 
