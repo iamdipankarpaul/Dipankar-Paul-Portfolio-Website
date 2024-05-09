@@ -14,7 +14,7 @@ const brightBlue = [
 ];
 
 const theme = createTheme({
-  primaryColor: "brightBlue",
+  // primaryColor: "brightBlue",
   colors: {
     brightBlue,
   },

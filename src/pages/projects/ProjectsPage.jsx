@@ -46,7 +46,7 @@ const ProjectsPage = () => {
             justify="space-between"
           >
             <MultiSelect
-              placeholder="Pick a tag"
+              placeholder="Search or Pick a tag"
               data={tagOptions}
               searchable
               clearable

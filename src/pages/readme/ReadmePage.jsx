@@ -8,7 +8,7 @@ import classes from "./Readme.module.css";
 // components
 import Topbar from "../../components/Topbar";
 import NameAnimation from "../../components/NameAnimation";
-import ReadmeSection from "./ReadmeSection";
+import ReadmeSection from "../../components/ReadmeSection";
 
 // constants
 import personalData from "../../constants";
@@ -27,8 +27,8 @@ const ReadmePage = () => {
           <Box pl={{ base: 0, sm: "lg" }}>
             <NameAnimation />
           </Box>
-          <Box pl={{ base: 0, sm: "lg" }}>
-            <Divider mb="sm" size="sm" />
+          <Box pl={{ base: 0, sm: "xl" }}>
+            <Divider mb="sm" />
             <Text fz="xl">{personalData.designation}</Text>
           </Box>
         </section>

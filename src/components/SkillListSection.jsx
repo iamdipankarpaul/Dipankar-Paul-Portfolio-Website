@@ -1,6 +1,5 @@
 import { Box, Flex, Title } from "@mantine/core";
-import SkillsImage from "../../components/SkillsImage";
-// import { skillList } from "../../constants/constants";
+import SkillsImage from "./SkillsImage";
 
 const SkillListSection = ({skillList}) => {
   const items = Object.keys(skillList).map((key) => (

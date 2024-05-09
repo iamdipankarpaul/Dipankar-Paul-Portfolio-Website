@@ -6,7 +6,7 @@ const ProjectCard = ({ project, tagClick }) => {
   const { hovered, ref: projectTitleref } = useHover();
 
   return (
-    <Card shadow="sm" padding="md" withBorder>
+    <Card shadow="md" padding="md" withBorder>
       {/* card heading */}
       <Group justify="space-between" gap="xs">
         <Text

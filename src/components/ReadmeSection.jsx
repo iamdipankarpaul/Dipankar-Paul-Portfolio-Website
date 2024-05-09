@@ -1,5 +1,5 @@
 import { Box, Text, Divider } from "@mantine/core";
-import SectionTitle from "../../components/SectionTitle";
+import SectionTitle from "./SectionTitle";
 import SkillListSection from "./SkillListSection";
 
 const ReadmeSection = ({ titleText, bodyContent, skillList }) => {
@@ -8,7 +8,7 @@ const ReadmeSection = ({ titleText, bodyContent, skillList }) => {
       <Box>
         <SectionTitle text={titleText} />
         <Box pl={{ base: 0, sm: "lg" }}>
-          <Divider size="sm" mb="sm" />
+          <Divider mb="sm" />
           {bodyContent && <Text fz="lg">{bodyContent}</Text>}
           {skillList && <SkillListSection skillList={skillList} />}
         </Box>
