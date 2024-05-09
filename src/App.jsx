@@ -9,6 +9,7 @@ import AppLayout from "./layout/AppLayout";
 // pages
 import ReadmePage from "./pages/readme/ReadmePage.jsx";
 import ProjectsPage from "./pages/projects/ProjectsPage.jsx";
+import ProjectPage from "./pages/project/ProjectPage.jsx";
 import BlogsPage from "./pages/blogs/BlogsPage.jsx";
 import ContactPage from "./pages/contact/ContactPage.jsx";
 
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "projects",
         element: <ProjectsPage />,
+      },
+      {
+        path: "projects/:slug",
+        element: <ProjectPage />,
       },
       {
         path: "blogs",

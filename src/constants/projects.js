@@ -13,13 +13,13 @@ const projects = [
       "Get code snippet for JavaScript Axios and Fetch methods",
     ],
     tags: [
-      "ReactJS",
-      "React Router Dom",
-      "Zustand",
-      "Mantine",
-      "Axios",
+      "reactjs",
+      "react router dom",
+      "zustand",
+      "mantine",
+      "axios",
       "bytes",
-      "Vite",
+      "vite",
     ],
     links: {
       demo: "https://reapi-client.vercel.app/",
@@ -46,7 +46,7 @@ const projects = [
       "A video detail page with views, likes, published time, description and comments",
       "Fully responsive design",
     ],
-    tags: ["ReactJS", "React Router Dom", "Zustand", "Mantine", "Axios"],
+    tags: ["reactjs", "react router dom", "zustand", "mantine", "axios"],
     links: {
       demo: "https://retube-nine.vercel.app/",
       github: "https://github.com/dipankarpaul2k/jsm_youtube_clone.git",
@@ -73,12 +73,12 @@ const projects = [
       "All your searches will be saved in history",
     ],
     tags: [
-      "ReactJS",
-      "React Router Dom",
-      "Zustand",
-      "Mantine",
-      "Axios",
-      "Vite",
+      "reactjs",
+      "react router dom",
+      "zustand",
+      "mantine",
+      "axios",
+      "vite",
     ],
     links: {
       demo: "https://wordinary-sigma.vercel.app/",
@@ -103,7 +103,7 @@ const projects = [
       "You can delete a budget or you can delete a specific expense of the budget",
       "You can also see all the expenses in one page",
     ],
-    tags: ["ReactJS", "React Router Dom"],
+    tags: ["reactjs", "react router dom"],
     links: {
       demo: "https://homebudget-react.vercel.app/",
       github: "https://github.com/dipankarpaul2k/Budget_App_React.git",
@@ -128,7 +128,7 @@ const projects = [
       'The "Reset" button allows users to clear the input fields and start over',
       "The application provides a notification system that displays success, error, and invalid messages",
     ],
-    tags: ["HTML", "CSS", "JavaScript"],
+    tags: ["html", "css", "javascript"],
     links: {
       demo: "https://password-generator-tau-ochre.vercel.app/",
       github: "https://github.com/dipankarpaul2k/Password-Generator.git",
@@ -149,7 +149,7 @@ const projects = [
       "Easily input text for conversion to speech",
       "Start and stop speech synthesis",
     ],
-    tags: ["HTML", "CSS", "JavaScript"],
+    tags: ["html", "css", "javascript"],
     links: {
       demo: "https://text-to-speech-cyan-six.vercel.app/",
       github: "https://github.com/dipankarpaul2k/Text-to-Speech.git",
@@ -169,7 +169,7 @@ const projects = [
       "Interactive animations and transitions",
       "Smooth scrolling and navigation",
     ],
-    tags: ["HTML", "CSS", "JavaScript"],
+    tags: ["html", "css", "javascript"],
     links: {
       demo: "https://cynthia-ugwu-landing-page-clone.vercel.app/",
       github:

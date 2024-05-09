@@ -9,7 +9,7 @@ const SectionTitle = ({ text }) => {
   return (
     <Box>
       <Flex align="center" ref={ref} gap="5px">
-        {!isMobile && <Link size={20} style={{ opacity: hovered ? 1 : 0 }} />}
+        {!isMobile && <Link size={20} style={{ opacity: hovered ? 1 : 0.2 }} />}
         <Title fw={500} fz={{ base: "h2", sm: "h1" }} py={"xs"}>
           {text}
         </Title>
