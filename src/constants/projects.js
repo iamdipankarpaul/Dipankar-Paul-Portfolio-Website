@@ -13,6 +13,7 @@ const projects = [
       "Get code snippet for JavaScript Axios and Fetch methods",
     ],
     tags: [
+      "javascript",
       "reactjs",
       "react router dom",
       "zustand",
@@ -46,7 +47,14 @@ const projects = [
       "A video detail page with views, likes, published time, description and comments",
       "Fully responsive design",
     ],
-    tags: ["reactjs", "react router dom", "zustand", "mantine", "axios"],
+    tags: [
+      "javascript",
+      "reactjs",
+      "react router dom",
+      "zustand",
+      "mantine",
+      "axios",
+    ],
     links: {
       demo: "https://retube-nine.vercel.app/",
       github: "https://github.com/dipankarpaul2k/jsm_youtube_clone.git",
@@ -56,8 +64,6 @@ const projects = [
       "https://res.cloudinary.com/dysni0qfj/image/upload/v1714926725/Retube/retube-nine-4.png",
       "https://res.cloudinary.com/dysni0qfj/image/upload/v1714926721/Retube/retube-nine-5.png",
       "https://res.cloudinary.com/dysni0qfj/image/upload/v1714926740/Retube/retube-nine-1.png",
-      "https://res.cloudinary.com/dysni0qfj/image/upload/v1714926735/Retube/retube-nine-2.png",
-      "https://res.cloudinary.com/dysni0qfj/image/upload/v1714926730/Retube/retube-nine-3.png",
     ],
     date: "2024-03-10",
   },
@@ -73,6 +79,7 @@ const projects = [
       "All your searches will be saved in history",
     ],
     tags: [
+      "javascript",
       "reactjs",
       "react router dom",
       "zustand",
@@ -92,6 +99,8 @@ const projects = [
       "https://res.cloudinary.com/dysni0qfj/image/upload/v1715191990/Wordinary/Wordinary-4_ijsaeu.png",
     ],
     date: "2024-01-10",
+    warning:
+      "For some reason React-router-dom's Outlet is not working properly. Please run this project locally or if you have any solution then please contact me.",
   },
   {
     title: "HomeBudget",
@@ -103,7 +112,7 @@ const projects = [
       "You can delete a budget or you can delete a specific expense of the budget",
       "You can also see all the expenses in one page",
     ],
-    tags: ["reactjs", "react router dom"],
+    tags: ["javascript", "reactjs", "react router dom"],
     links: {
       demo: "https://homebudget-react.vercel.app/",
       github: "https://github.com/dipankarpaul2k/Budget_App_React.git",
@@ -142,7 +151,7 @@ const projects = [
   {
     title: "Text to Speech App",
     description:
-      "This is a simple web application that allows users to convert text into speech using the Speech Synthesis Web Speech API",
+      "This is a simple web application that allows users to convert text into speech using the Speech Synthesis Web Speech API.",
     features: [
       "Choose from a list of available voices",
       "Adjust speech rate and pitch",

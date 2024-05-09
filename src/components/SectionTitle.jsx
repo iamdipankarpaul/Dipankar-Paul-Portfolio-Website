@@ -2,7 +2,7 @@ import { Title, Box, Flex } from "@mantine/core";
 import { useHover, useMediaQuery } from "@mantine/hooks";
 import { Link, Hash } from "@phosphor-icons/react";
 
-const SectionTitle = ({ text }) => {
+const SectionTitle = ({ text, baseAs, smAs, pyAs }) => {
   const { hovered, ref } = useHover();
   const isMobile = useMediaQuery("(max-width: 48em)");
 
@@ -10,7 +10,11 @@ const SectionTitle = ({ text }) => {
     <Box>
       <Flex align="center" ref={ref} gap="5px">
         {!isMobile && <Link size={20} style={{ opacity: hovered ? 1 : 0.2 }} />}
-        <Title fw={500} fz={{ base: "h2", sm: "h1" }} py={"xs"}>
+        <Title
+          fw={500}
+          fz={{ base: baseAs || "h2", sm: smAs || "h1" }}
+          py={pyAs || "xs"}
+        >
           {text}
         </Title>
       </Flex>

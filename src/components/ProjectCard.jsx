@@ -13,7 +13,7 @@ const ProjectCard = ({ project, tagClick }) => {
           fz="h3"
           fw={500}
           component={Link}
-          to={`#`}
+          to={`/projects/${project.slug}`}
           w="75%"
           style={{
             whiteSpace: "nowrap",
