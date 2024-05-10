@@ -1,14 +1,13 @@
+import { Link } from "react-router-dom";
 import {
   ActionIcon,
   Burger,
   Group,
-  Text,
   Tooltip,
   useMantineColorScheme,
   useComputedColorScheme,
   Title,
 } from "@mantine/core";
-
 import { MoonStars, Sun } from "@phosphor-icons/react";
 
 const AppHeader = ({ opened, toggleNavbar }) => {
@@ -19,7 +18,14 @@ const AppHeader = ({ opened, toggleNavbar }) => {
 
   return (
     <Group h="100%" px="md" justify="space-between">
-      <Title fz="h2" fw="700">
+      <Title
+        fz="h2"
+        fw="700"
+        component={Link}
+        to={"/"}
+        style={{ color: "var(--mantine-color-text)" }}
+        td="none"
+      >
         Dipankar Paul
       </Title>
       <Group>

@@ -1,6 +1,6 @@
 import { Title, Box, Flex } from "@mantine/core";
 import { useHover, useMediaQuery } from "@mantine/hooks";
-import { Link, Hash } from "@phosphor-icons/react";
+import { Link } from "@phosphor-icons/react";
 
 const SectionTitle = ({ text, baseAs, smAs, pyAs }) => {
   const { hovered, ref } = useHover();
@@ -14,6 +14,7 @@ const SectionTitle = ({ text, baseAs, smAs, pyAs }) => {
           fw={500}
           fz={{ base: baseAs || "h2", sm: smAs || "h1" }}
           py={pyAs || "xs"}
+          tt="capitalize"
         >
           {text}
         </Title>

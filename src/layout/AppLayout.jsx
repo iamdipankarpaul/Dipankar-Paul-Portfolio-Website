@@ -5,6 +5,7 @@ import { useDisclosure } from "@mantine/hooks";
 // components
 import AppNavbar from "./AppNavbar";
 import AppHeader from "./AppHeader";
+import AppFooter from "./AppFooter";
 
 // constants
 import personalData from "../constants";
@@ -45,6 +46,7 @@ const AppLayout = () => {
       <AppShell.Main>
         {/* Outlet */}
         <Outlet />
+        <AppFooter />
       </AppShell.Main>
     </AppShell>
   );

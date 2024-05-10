@@ -53,7 +53,7 @@ const ContactForm = () => {
           field="message"
           errors={state.errors}
         />
-        <Group my="md" justify="center">
+        <Group mt="md" justify="center">
           <Button type="submit" loading={state.submitting} size="md">
             Submit
           </Button>

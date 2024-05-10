@@ -13,10 +13,7 @@ const ContactPage = () => {
     <Box className={classes.wrapper}>
       <Topbar label="Contact Me" icon={<PaperPlaneTilt size={24} />} />
       {/* page body */}
-      <Box
-        py={{ base: "sm", sm: "lg" }}
-        px={{ base: "xs", sm: "lg", md: "50px" }}
-      >
+      <Box py={{ base: "sm", sm: "lg" }} px={{ base: "xs", sm: "lg" }}>
         <Flex
           direction={{ base: "column", md: "row" }}
           gap={{ base: "sm", sm: "lg" }}
@@ -24,7 +21,7 @@ const ContactPage = () => {
         >
           {/* contact details */}
           <Box w={"100%"}>
-            <Flex h="100%" align="center">
+            <Flex h="100%">
               <ContactDetails personalData={personalData} />
             </Flex>
           </Box>
