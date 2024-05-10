@@ -19,6 +19,7 @@ const personalData = {
   socialLinks,
   projects,
   resume: "...",
+  location: "Falakata, West Bengal, India",
 };
 
 export default personalData;
