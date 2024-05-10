@@ -3,22 +3,26 @@ import {
   Box,
   Button,
   Group,
-  Text,
   Textarea,
   TextInput,
   Notification,
 } from "@mantine/core";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const ContactForm = () => {
+  const formRef = useRef();
   const [closeNotification, setCloseNotification] = useState(false);
 
   const formspreeKey = String(import.meta.env.VITE_FORMSPREE_KEY);
   const [state, handleSubmit] = useForm(formspreeKey);
 
+  if (state.succeeded) {
+    formRef.current.reset();
+  }
+
   return (
     <Box h={"100%"} py="sm">
-      <form onSubmit={handleSubmit}>
+      <form ref={formRef} onSubmit={handleSubmit}>
         <TextInput
           label="Your Name"
           placeholder="Your name"
@@ -60,7 +64,7 @@ const ContactForm = () => {
         </Group>
       </form>
       {state.succeeded && (
-        <Box style={{ display: closeNotification ? "none" : "block" }}>
+        <Box style={{ display: closeNotification ? "none" : "block" }} py="sm">
           <Notification withBorder onClose={() => setCloseNotification(true)}>
             Thanks for contacting me.
           </Notification>

@@ -39,7 +39,7 @@
     var(--mantine-color-dark-4)
   );
   border-radius: var(--mantine-radius-md);
-  padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
+  padding: var(--mantine-spacing-lg) var(--mantine-spacing-md);
   margin-top: var(--mantine-spacing-md);
 }
 

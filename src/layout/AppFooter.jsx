@@ -25,7 +25,7 @@ const AppFooter = () => {
         ta="center"
         justify="space-between"
         align="center"
-        gap={20}
+        gap={10}
       >
         <Box>
           <Text fw={500}>Made by me, Dipankar Paul.</Text>
