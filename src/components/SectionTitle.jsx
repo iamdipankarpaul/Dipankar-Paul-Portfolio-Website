@@ -1,4 +1,4 @@
-import { Title, Box, Flex, Text } from "@mantine/core";
+import { Title, Flex, Text } from "@mantine/core";
 import { useHover, useMediaQuery } from "@mantine/hooks";
 import { Link } from "@phosphor-icons/react";
 import { useNavigate } from "react-router-dom";

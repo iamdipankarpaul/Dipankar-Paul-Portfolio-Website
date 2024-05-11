@@ -24,7 +24,7 @@ const AppNavbar = ({ links, closeNavbar }) => {
               <item.leftIcon size={24} />
               <Text span>{item.label}</Text>
             </Group>
-            {!isMobile && item.rightIcon && <item.rightIcon size={16} />}
+            {item.rightIcon && <item.rightIcon size={16} />}
           </NavLink>
         </li>
       ))}
