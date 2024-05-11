@@ -9,11 +9,13 @@ const ReadmeSection = ({
   skillList,
   projectList,
   blogList,
+  linkText,
+  linkTo,
 }) => {
   return (
     <section aria-label={`${titleText} section`} style={{ marginTop: "20px" }}>
       <Box>
-        <SectionTitle text={titleText} />
+        <SectionTitle text={titleText} linkText={linkText} linkTo={linkTo} />
         {bodyContent && (
           <Box pl={{ base: 0, sm: "lg" }}>
             <Divider mb="sm" />
@@ -27,14 +29,13 @@ const ReadmeSection = ({
           </Box>
         )}
         {projectList && (
-          <Box>
+          <Box pl={{ base: 0, sm: "sm", md: "lg" }}>
             <Divider mb="sm" />
-            {/* <SimpleGrid cols={{ base: 1, sm: 2 }}></SimpleGrid> */}
             <ProjectList projects={projectList} />
           </Box>
         )}
         {blogList && (
-          <Box>
+          <Box pl={{ base: 0, sm: "sm", md: "lg" }}>
             <Divider mb="sm" />
           </Box>
         )}

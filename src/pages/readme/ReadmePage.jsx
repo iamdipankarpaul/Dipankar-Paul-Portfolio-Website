@@ -1,4 +1,4 @@
-import { Box, Divider, Text, SimpleGrid } from "@mantine/core";
+import { Box, Divider, Text } from "@mantine/core";
 // icon
 import { BookOpen } from "@phosphor-icons/react";
 
@@ -12,8 +12,6 @@ import ReadmeSection from "../../components/ReadmeSection";
 
 // constants
 import personalData from "../../constants";
-import { useScrollIntoView } from "@mantine/hooks";
-import { useEffect } from "react";
 
 const ReadmePage = () => {
   const pinnedProjects = Object.groupBy(
@@ -21,17 +19,8 @@ const ReadmePage = () => {
     ({ pinned }) => pinned
   );
 
-  const { scrollIntoView, targetRef: wrapperRef } = useScrollIntoView({
-    offset: 100,
-    duration: 500,
-  });
-
-  useEffect(() => {
-    scrollIntoView({ alignment: "start" });
-  }, []);
-
   return (
-    <Box className={classes.wrapper} ref={wrapperRef}>
+    <Box className={classes.wrapper}>
       <Topbar label="README.md" icon={<BookOpen size={24} />} />
       {/* body */}
       <Box
@@ -69,6 +58,8 @@ const ReadmePage = () => {
         <ReadmeSection
           titleText={"Pinned Projects"}
           projectList={pinnedProjects.true}
+          linkText="All Projects"
+          linkTo="/projects"
         />
         {/* blogs */}
       </Box>
