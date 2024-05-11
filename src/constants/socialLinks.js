@@ -6,6 +6,7 @@ import {
   DevToLogo,
   GithubLogo,
   LinkedinLogo,
+  WhatsappLogo,
 } from "@phosphor-icons/react";
 
 const socialLinks = [
@@ -16,6 +17,7 @@ const socialLinks = [
     leftIcon: LinkedinLogo,
     rightIcon: ArrowUpRight,
     target: "_blank",
+    ariaLabel: "Linkedin link",
   },
   {
     id: randomId(),
@@ -24,6 +26,7 @@ const socialLinks = [
     leftIcon: GithubLogo,
     rightIcon: ArrowUpRight,
     target: "_blank",
+    ariaLabel: "Github link",
   },
   {
     id: randomId(),
@@ -32,6 +35,7 @@ const socialLinks = [
     leftIcon: CodepenLogo,
     rightIcon: ArrowUpRight,
     target: "_blank",
+    ariaLabel: "Codepen link",
   },
   {
     id: randomId(),
@@ -40,6 +44,16 @@ const socialLinks = [
     leftIcon: DevToLogo,
     rightIcon: ArrowUpRight,
     target: "_blank",
+    ariaLabel: "Dev.to link",
+  },
+  {
+    id: randomId(),
+    to: "https://wa.link/0y3avn",
+    label: "WhatsApp",
+    leftIcon: WhatsappLogo,
+    rightIcon: ArrowUpRight,
+    target: "_blank",
+    ariaLabel: "Whatsapp link",
   },
 ];
 

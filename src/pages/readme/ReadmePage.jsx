@@ -33,6 +33,8 @@ const ReadmePage = () => {
           </Box>
         </section>
 
+        {/* about me */}
+
         {personalData.aboutMe.map((about) => (
           <ReadmeSection
             key={about.id}
@@ -41,10 +43,16 @@ const ReadmePage = () => {
           />
         ))}
 
+        {/* skills */}
         <ReadmeSection
           titleText={personalData.skills.title}
           skillList={personalData.skills.skillList}
         />
+
+        {/* projects */}
+
+
+        {/* blogs */}
       </Box>
     </Box>
   );

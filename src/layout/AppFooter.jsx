@@ -1,18 +1,5 @@
-import {
-  Box,
-  Flex,
-  ActionIcon,
-  Group,
-  Tooltip,
-  Text,
-  Title,
-} from "@mantine/core";
-import {
-  CodepenLogo,
-  DevToLogo,
-  GithubLogo,
-  LinkedinLogo,
-} from "@phosphor-icons/react";
+import { Link } from "react-router-dom";
+import { Box, Flex, ActionIcon, Group, Tooltip, Text } from "@mantine/core";
 
 import classes from "./AppLayout.module.css";
 import personalData from "../constants";
@@ -36,9 +23,12 @@ const AppFooter = () => {
               <Tooltip label={item.label} key={item.id}>
                 <ActionIcon
                   variant="default"
-                  aria-label={item.label}
+                  aria-label={item.ariaLabel}
                   size="lg"
                   radius="xl"
+                  component={Link}
+                  to={item.to}
+                  target={item.target}
                 >
                   <item.leftIcon size={"70%"} />
                 </ActionIcon>

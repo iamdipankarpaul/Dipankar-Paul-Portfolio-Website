@@ -75,7 +75,6 @@ const projects = [
       "See definitions along with examples, synonyms and antonyms(if exists)",
       "Save the words you like in bookmark and manage it",
       "Bookmark's response will be saved in local storage, so you don't have to call API again",
-      "",
       "All your searches will be saved in history",
     ],
     tags: [

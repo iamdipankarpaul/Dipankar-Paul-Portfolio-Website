@@ -65,8 +65,12 @@ const ContactForm = () => {
       </form>
       {state.succeeded && (
         <Box style={{ display: closeNotification ? "none" : "block" }} py="sm">
-          <Notification withBorder onClose={() => setCloseNotification(true)}>
-            Thanks for contacting me.
+          <Notification
+            title="Message Sent!"
+            withBorder
+            onClose={() => setCloseNotification(true)}
+          >
+            Thank you for contacting me. I'll reply soon!
           </Notification>
         </Box>
       )}

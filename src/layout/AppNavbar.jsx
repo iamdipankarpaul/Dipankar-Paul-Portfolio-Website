@@ -6,7 +6,7 @@ const AppNavbar = ({ links, closeNavbar }) => {
   return (
     <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
       {links.map((item) => (
-        <li key={item.id}>
+        <li key={item.id} aria-label={item.ariaLabel}>
           <NavLink
             to={item.to}
             onClick={closeNavbar}
