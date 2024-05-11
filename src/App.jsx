@@ -1,5 +1,5 @@
 import "@mantine/core/styles.css";
-import '@mantine/carousel/styles.css';
+import "@mantine/carousel/styles.css";
 import { MantineProvider } from "@mantine/core";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -14,8 +14,8 @@ import ProjectPage from "./pages/project/ProjectPage.jsx";
 import BlogsPage from "./pages/blogs/BlogsPage.jsx";
 import ContactPage from "./pages/contact/ContactPage.jsx";
 
-//
-import theme from "./theme.js";
+// theme styles
+import theme, { variableResolver } from "./theme.js";
 
 // router configuration
 const router = createBrowserRouter([
@@ -58,7 +58,11 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <MantineProvider theme={theme} defaultColorScheme="dark">
+    <MantineProvider
+      theme={theme}
+      defaultColorScheme="dark"
+      cssVariablesResolver={variableResolver}
+    >
       <RouterProvider router={router} />
     </MantineProvider>
   );

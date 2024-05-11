@@ -35,6 +35,7 @@ const projects = [
       "https://res.cloudinary.com/dysni0qfj/image/upload/v1713428699/ReAPI%20Client%20Project/ReAPI_Client_code_snippet.png",
     ],
     date: "2024-04-10",
+    pinned: true,
   },
   {
     title: "ReTube",
@@ -66,6 +67,7 @@ const projects = [
       "https://res.cloudinary.com/dysni0qfj/image/upload/v1714926740/Retube/retube-nine-1.png",
     ],
     date: "2024-03-10",
+    pinned: true,
   },
   {
     title: "Wordinary",
@@ -100,6 +102,7 @@ const projects = [
     date: "2024-01-10",
     warning:
       "For some reason React-router-dom's Outlet is not working properly. Please run this project locally or if you have any solution then please contact me.",
+    pinned: false,
   },
   {
     title: "HomeBudget",
@@ -124,6 +127,7 @@ const projects = [
       "https://res.cloudinary.com/dysni0qfj/image/upload/v1714927070/HomeBudget%20app/homebudget-4.png",
     ],
     date: "2023-12-10",
+    pinned: false,
   },
   {
     title: "Password Generator",
@@ -146,6 +150,7 @@ const projects = [
       "https://res.cloudinary.com/dysni0qfj/image/upload/v1715191462/password%20generator/password-generator_idr69h.png",
     ],
     date: "2023-11-10",
+    pinned: false,
   },
   {
     title: "Text to Speech App",
@@ -167,6 +172,7 @@ const projects = [
       "https://res.cloudinary.com/dysni0qfj/image/upload/v1715191485/text%20to%20speech%20app/text-to-speech-app_a0zaph.png",
     ],
     date: "2023-10-10",
+    pinned: false,
   },
   {
     title: "Cynthia Ugwu Website Clone",
@@ -190,6 +196,7 @@ const projects = [
       "https://res.cloudinary.com/dysni0qfj/image/upload/v1715191270/Landing%20Pages/cynthia-ugwu-3.png",
     ],
     date: "2023-09-10",
+    pinned: true,
   },
 ];
 

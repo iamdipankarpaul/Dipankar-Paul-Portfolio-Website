@@ -23,6 +23,19 @@ const theme = createTheme({
   defaultRadius: "md",
   fontFamily: "Outfit, sans-serif",
   headings: { fontFamily: "Space Grotesk, sans-serif" },
+  other: {
+    bgColorLight: "#FFFFFF",
+    bgColorDark: "#0D1117",
+  },
+});
+
+export const variableResolver = (theme) => ({
+  light: {
+    "--mantine-color-body": theme.other.bgColorLight,
+  },
+  dark: {
+    "--mantine-color-body": theme.other.bgColorDark,
+  },
 });
 
 export default theme;

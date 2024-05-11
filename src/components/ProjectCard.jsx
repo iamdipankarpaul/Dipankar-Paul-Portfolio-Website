@@ -1,4 +1,4 @@
-import { Box, Card, Group, Text, ThemeIcon, Badge, Flex } from "@mantine/core";
+import { Card, Group, Text, Badge, Flex } from "@mantine/core";
 import { useHover } from "@mantine/hooks";
 import { Link } from "react-router-dom";
 
@@ -14,7 +14,7 @@ const ProjectCard = ({ project, tagClick }) => {
           fw={500}
           component={Link}
           to={`/projects/${project.slug}`}
-          w="75%"
+          w="70%"
           style={{
             whiteSpace: "nowrap",
             overflow: "hidden",

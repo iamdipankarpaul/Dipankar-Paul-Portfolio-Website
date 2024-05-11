@@ -5,7 +5,7 @@ import ProjectCard from "./ProjectCard";
 const ProjectList = ({ projects, tagClick }) => {
   return (
     <Box my="md">
-      <SimpleGrid cols={{ base: 1, xs: 2 }} spacing="md">
+      <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
         {projects.map((project) => (
           <ProjectCard
             key={project.slug}

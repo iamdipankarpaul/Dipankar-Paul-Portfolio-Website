@@ -1,8 +1,11 @@
 import { NavLink } from "react-router-dom";
 import { Group, Text } from "@mantine/core";
 import classes from "./AppLayout.module.css";
+import { useMediaQuery } from "@mantine/hooks";
 
 const AppNavbar = ({ links, closeNavbar }) => {
+  const isMobile = useMediaQuery("(max-width: 64em)");
+
   return (
     <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
       {links.map((item) => (
@@ -21,7 +24,7 @@ const AppNavbar = ({ links, closeNavbar }) => {
               <item.leftIcon size={24} />
               <Text span>{item.label}</Text>
             </Group>
-            {item.rightIcon && <item.rightIcon size={16} />}
+            {!isMobile && item.rightIcon && <item.rightIcon size={16} />}
           </NavLink>
         </li>
       ))}

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 import {
   Badge,
   Box,
@@ -10,7 +11,7 @@ import {
   Button,
 } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
-import { Link, useParams } from "react-router-dom";
+import { useScrollIntoView } from "@mantine/hooks";
 import { Warning } from "@phosphor-icons/react";
 
 import classes from "./Project.module.css";
@@ -26,8 +27,17 @@ const ProjectPage = () => {
   const { slug } = useParams();
   const project = personalData.projects.find((p) => p.slug === slug);
 
+  const { scrollIntoView, targetRef: wrapperRef } = useScrollIntoView({
+    offset: 100,
+    duration: 500,
+  });
+
+  useEffect(() => {
+    scrollIntoView({ alignment: "start" });
+  }, []);
+
   return (
-    <Box className={classes.wrapper}>
+    <Box className={classes.wrapper} ref={wrapperRef}>
       <Topbar label={project.title} />
       {/* project details body */}
       <Box py={{ base: "sm", sm: "md" }} px="xs">
@@ -110,12 +120,18 @@ const ProjectPage = () => {
                   fullWidth
                   component={Link}
                   to={project.links.demo}
+                  target="_blank"
                 >
                   Live
                 </Button>
               </Box>
               <Box>
-                <Button component={Link} to={project.links.github} fullWidth>
+                <Button
+                  component={Link}
+                  to={project.links.github}
+                  target="_blank"
+                  fullWidth
+                >
                   GitHub
                 </Button>
               </Box>

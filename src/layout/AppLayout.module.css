@@ -1,5 +1,5 @@
 .navlink {
-  padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
   border-radius: var(--mantine-radius-md);
   margin-bottom: var(--mantine-spacing-xs);
   font-weight: 500;
