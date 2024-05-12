@@ -1,13 +1,32 @@
-import { useEffect } from "react";
-import { Box } from "@mantine/core";
-import { useScrollIntoView, useFetch } from "@mantine/hooks";
+import { useEffect, useState } from "react";
+import {
+  Box,
+  Flex,
+  MultiSelect,
+  Select,
+  Text,
+  Button,
+  Center,
+  Group,
+} from "@mantine/core";
+import { useScrollIntoView } from "@mantine/hooks";
 import { Article } from "@phosphor-icons/react";
 
 import classes from "./Blogs.module.css";
 
 import Topbar from "../../components/Topbar";
+import BlogList from "../../components/BlogList";
+import fetchBlogs from "../../utils/fetchBlogs";
 
 const BlogsPage = () => {
+  const [loading, setLoading] = useState(false);
+  const [blogs, setBlogs] = useState([]);
+  const [error, setError] = useState(null);
+  const [tagOptions, setTagOptions] = useState([]);
+  const [selectedTags, setSelectedTags] = useState([]);
+  const [sortBy, setSortBy] = useState("Newest");
+  const [filteredBlogs, setFilteredBlogs] = useState([]);
+
   const { scrollIntoView, targetRef: wrapperRef } = useScrollIntoView({
     offset: 100,
     duration: 500,
@@ -17,42 +36,151 @@ const BlogsPage = () => {
     scrollIntoView({ alignment: "start" });
   }, []);
 
-  const { data, loading, error, refetch, abort } = useFetch(
-    "https://dev.to/api/articles?username=dipankarpaul"
-  );
+  // fetch blogs
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const blogsData = await fetchBlogs();
+        setBlogs([...blogsData]);
+        setLoading(false);
+        setError(null);
+      } catch (error) {
+        setError({
+          status: error.response.status,
+          message: "Fail to fetch the blogs.",
+        });
+        setLoading(false);
+        setBlogs([]);
+      }
+    };
+    fetchData();
+  }, []);
 
-  let mappedData = null;
-  if (data) {
-    mappedData = data.map(
-      ({
-        description,
-        id,
-        published_at,
-        readable_publish_date,
-        reading_time_minutes,
-        tag_list,
-        tags,
-        title,
-        url,
-      }) => ({
-        description,
-        id,
-        published_at,
-        readable_publish_date,
-        reading_time_minutes,
-        tag_list,
-        tags,
-        title,
-        url,
-      })
+  // update tag options and filtered blogs
+  useEffect(() => {
+    if (blogs.length > 0) {
+      // Update tagOptions
+      setTagOptions(Array.from(new Set(blogs.flatMap((b) => b.tag_list))));
+
+      // Update filteredBlogs
+      setFilteredBlogs(
+        blogs.filter((blog) =>
+          selectedTags.every((tag) => blog.tags.includes(tag))
+        )
+      );
+    }
+  }, [blogs, selectedTags]);
+
+  // refetch blogs
+  const refetchBlogs = async () => {
+    setLoading(true);
+    try {
+      const blogsData = await fetchBlogs();
+      setBlogs([...blogsData]);
+      setLoading(false);
+      setError(null);
+    } catch (error) {
+      setError({
+        status: error.response.status,
+        message: "Fail to fetch the blogs.",
+      });
+      setLoading(false);
+      setBlogs([]);
+    }
+  };
+
+  const handleTagClick = (tag) => {
+    if (selectedTags.includes(tag)) {
+      setSelectedTags(selectedTags.filter((t) => t !== tag));
+    } else {
+      setSelectedTags([...selectedTags, tag]);
+    }
+  };
+
+  if (sortBy === "Newest") {
+    filteredBlogs.sort(
+      (a, b) =>
+        new Date(b.readable_publish_date) - new Date(a.readable_publish_date)
+    );
+  } else {
+    filteredBlogs.sort(
+      (a, b) =>
+        new Date(a.readable_publish_date) - new Date(b.readable_publish_date)
     );
   }
 
   return (
     <Box className={classes.wrapper} ref={wrapperRef}>
       <Topbar label="Blogs" icon={<Article size={24} />} />
+      {/* blog page content */}
       <Box py={{ base: "sm", sm: "lg" }} px={{ base: "xs", sm: "lg" }}>
-        <Box>{!mappedData ? "loading" : "Blogs Page"}</Box>
+        {/* loading */}
+        {loading && (
+          <Center>
+            <Text>Loading</Text>
+          </Center>
+        )}
+
+        {/* error */}
+        {error && (
+          <>
+            <Center>
+              <Box ta="center">
+                <Text my="sm">{error.message}</Text>
+                <Group wrap="nowrap">
+                  <Button onClick={refetchBlogs} variant="light">
+                    Try Again
+                  </Button>
+                  <Button>Go Back</Button>
+                </Group>
+              </Box>
+            </Center>
+          </>
+        )}
+
+        {/* blog list */}
+        {blogs.length > 0 && (
+          <>
+            {/* search and sort */}
+            <Box>
+              <Flex
+                direction={{ base: "column-reverse", sm: "row" }}
+                gap={{ base: "sm", sm: "lg" }}
+                justify="space-between"
+              >
+                <MultiSelect
+                  placeholder="Search or Pick a tag"
+                  data={tagOptions}
+                  searchable
+                  clearable
+                  checkIconPosition="right"
+                  value={selectedTags}
+                  onChange={setSelectedTags}
+                  aria-label="Pick a tag input"
+                  maw={{ base: "auto", sm: "400px" }}
+                  style={{ flex: 1 }}
+                  size="md"
+                />
+                <Select
+                  aria-label="Sort projects by newest or oldest"
+                  data={["Newest", "Oldest"]}
+                  defaultValue="Newest"
+                  allowDeselect={false}
+                  checkIconPosition="right"
+                  value={sortBy}
+                  onChange={setSortBy}
+                  maw={{ base: "auto", sm: "120px" }}
+                  size="md"
+                />
+              </Flex>
+            </Box>
+            {/* bloglist */}
+            <Box>
+              <BlogList blogs={filteredBlogs} tagClick={handleTagClick} />
+            </Box>
+          </>
+        )}
       </Box>
     </Box>
   );

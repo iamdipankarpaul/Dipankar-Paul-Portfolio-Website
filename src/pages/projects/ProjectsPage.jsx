@@ -21,6 +21,10 @@ const ProjectsPage = () => {
     scrollIntoView({ alignment: "start" });
   }, []);
 
+  const tagOptions = Array.from(
+    new Set(personalData.projects.flatMap((project) => project.tags))
+  );
+
   const handleTagClick = (tag) => {
     if (selectedTags.includes(tag)) {
       setSelectedTags(selectedTags.filter((t) => t !== tag));
@@ -28,10 +32,6 @@ const ProjectsPage = () => {
       setSelectedTags([...selectedTags, tag]);
     }
   };
-
-  const tagOptions = Array.from(
-    new Set(personalData.projects.flatMap((project) => project.tags))
-  );
 
   const filteredProjects = personalData.projects.filter((project) =>
     selectedTags.every((tag) => project.tags.includes(tag))
