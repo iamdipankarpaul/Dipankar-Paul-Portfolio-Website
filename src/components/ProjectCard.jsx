@@ -23,7 +23,6 @@ const ProjectCard = ({ project, tagClick }) => {
           }}
           ref={projectTitleref}
           c="blue"
-          data-clickable
         >
           {project.title}
         </Text>
@@ -33,7 +32,6 @@ const ProjectCard = ({ project, tagClick }) => {
           target="_blank"
           rel="noopener noreferrer"
           style={{ cursor: "pointer" }}
-          data-clickable
         >
           Live
         </Badge>

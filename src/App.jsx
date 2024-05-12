@@ -14,8 +14,6 @@ import ProjectPage from "./pages/project/ProjectPage.jsx";
 import BlogsPage from "./pages/blogs/BlogsPage.jsx";
 import ContactPage from "./pages/contact/ContactPage.jsx";
 
-import CustomCursor from "./components/cursor/CustomCursor.jsx";
-
 // theme styles
 import theme, { variableResolver } from "./theme.js";
 
@@ -65,7 +63,6 @@ function App() {
       defaultColorScheme="dark"
       cssVariablesResolver={variableResolver}
     >
-      <CustomCursor />
       <RouterProvider router={router} />
     </MantineProvider>
   );
