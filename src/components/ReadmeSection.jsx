@@ -2,6 +2,7 @@ import { Box, Text, Divider, SimpleGrid } from "@mantine/core";
 import SectionTitle from "./SectionTitle";
 import SkillListSection from "./SkillListSection";
 import ProjectList from "./ProjectList";
+import BlogList from "./BlogList";
 
 const ReadmeSection = ({
   titleText,
@@ -37,6 +38,7 @@ const ReadmeSection = ({
         {blogList && (
           <Box pl={{ base: 0, sm: "sm", md: "lg" }}>
             <Divider mb="sm" />
+            <BlogList blogs={blogList} />
           </Box>
         )}
       </Box>
