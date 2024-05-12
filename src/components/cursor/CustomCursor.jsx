@@ -16,7 +16,7 @@ const CustomCursor = () => {
       gsap.to(cursor, {
         x: e.clientX - 10,
         y: e.clientY - 10,
-        duration: 0.3,
+        duration: 0.5,
         ease: "power2.out",
       });
 
@@ -24,13 +24,11 @@ const CustomCursor = () => {
         gsap.to(cursor, {
           scale: 2,
           duration: 0.3,
-          ease: "power2.out",
         });
       } else {
         gsap.to(cursor, {
           scale: 1,
           duration: 0.3,
-          ease: "power2.out",
         });
       }
     };
