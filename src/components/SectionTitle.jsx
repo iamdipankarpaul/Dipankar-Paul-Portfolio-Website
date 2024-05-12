@@ -30,7 +30,7 @@ const SectionTitle = ({
         </Title>
       </Flex>
       {linkText && linkTo && (
-        <Text onClick={() => navigate(linkTo)} style={{ cursor: "pointer" }}>
+        <Text onClick={() => navigate(linkTo)} style={{ cursor: "pointer" }} data-clickable>
           {linkText}
         </Text>
       )}

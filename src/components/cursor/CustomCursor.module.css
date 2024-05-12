@@ -1,0 +1,17 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  background-color: light-dark(#f2eee8, #ffffff);
+  mix-blend-mode: difference;
+  z-index: 99999;
+}
+
+/* 
+background color - foreground color = mix blend mode
+#ffffff - #f2eee8 => #0d1117
+*/

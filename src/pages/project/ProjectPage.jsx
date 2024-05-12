@@ -121,6 +121,7 @@ const ProjectPage = () => {
                   component={Link}
                   to={project.links.demo}
                   target="_blank"
+                  data-clickable
                 >
                   Live
                 </Button>
@@ -131,6 +132,7 @@ const ProjectPage = () => {
                   to={project.links.github}
                   target="_blank"
                   fullWidth
+                  data-clickable
                 >
                   GitHub
                 </Button>

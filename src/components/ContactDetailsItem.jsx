@@ -10,7 +10,7 @@ const ContactDetailsItem = ({ listIcon, label, href }) => {
       }
       mt="xs"
     >
-      <Anchor href={href} target="_blank" fz="lg">
+      <Anchor href={href} target="_blank" fz="lg" data-clickable>
         {label}
       </Anchor>
     </List.Item>

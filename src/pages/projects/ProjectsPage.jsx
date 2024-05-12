@@ -66,6 +66,7 @@ const ProjectsPage = () => {
               aria-label="Pick a tag input"
               maw={{ base: "auto", sm: "400px" }}
               style={{ flex: 1 }}
+              size="md"
             />
             <Select
               aria-label="Sort projects by newest or oldest"
@@ -75,7 +76,8 @@ const ProjectsPage = () => {
               checkIconPosition="right"
               value={sortBy}
               onChange={setSortBy}
-              maw={{ base: "auto", sm: "100px" }}
+              maw={{ base: "auto", sm: "120px" }}
+              size="md"
             />
           </Flex>
         </Box>
