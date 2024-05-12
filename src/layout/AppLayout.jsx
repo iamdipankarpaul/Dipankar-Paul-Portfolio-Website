@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { AppShell, Box, Text } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 
 // components
 import AppNavbar from "./AppNavbar";
@@ -16,9 +16,11 @@ const AppLayout = () => {
   const [opened, { toggle: toggleNavbar, close: closeNavbar }] =
     useDisclosure();
 
+  const isDesktop = useMediaQuery("(min-width: 48em)");
+
   return (
     <>
-      <CustomCursor />
+      {isDesktop && <CustomCursor />}
       <AppShell
         header={{ height: 60 }}
         navbar={{
