@@ -16,7 +16,6 @@ import ContactPage from "./pages/ContactPage.jsx";
 
 // theme styles
 import theme, { variableResolver } from "./theme.js";
-import ResumePage from "./pages/ResumePage.jsx";
 
 // router configuration
 const router = createBrowserRouter([
@@ -43,10 +42,6 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <ContactPage />,
-      },
-      {
-        path: "resume",
-        element: <ResumePage />,
       },
     ],
   },
