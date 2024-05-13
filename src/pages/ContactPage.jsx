@@ -36,8 +36,8 @@ const ContactPage = () => {
       {/* page body */}
       <Box
         pt={{ base: "sm", sm: "md", md: "lg" }}
-        px={{ base: 0, sm: "xs" }}
         pb={{ base: 0, sm: "xs" }}
+        px="xs"
       >
         <Flex
           direction={{ base: "column", md: "row" }}

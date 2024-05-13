@@ -55,8 +55,8 @@ const ReadmePage = () => {
       {/* body */}
       <Box
         pt={{ base: "sm", sm: "md", md: "lg", lg: "xl" }}
-        px={{ base: 0, sm: "xs" }}
         pb={{ base: 0, sm: "xs" }}
+        px="xs"
       >
         {/* readme header section */}
         <section aria-label="Readme header section">

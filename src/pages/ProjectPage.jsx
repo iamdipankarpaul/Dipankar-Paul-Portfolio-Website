@@ -53,8 +53,8 @@ const ProjectPage = () => {
       {/* project details body */}
       <Box
         pt={{ base: "sm", sm: "md", md: "lg" }}
-        px={{ base: 0, sm: "xs" }}
         pb={{ base: 0, sm: "xs" }}
+        px="xs"
       >
         {/* author's warnings or notes */}
 

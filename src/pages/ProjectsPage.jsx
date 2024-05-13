@@ -59,8 +59,8 @@ const ProjectsPage = () => {
       {/* projects body */}
       <Box
         pt={{ base: "sm", sm: "md" }}
-        px={{ base: 0, sm: "xs" }}
         pb={{ base: 0, sm: "xs" }}
+        px="xs"
       >
         {/* search and sort */}
         <Box>
