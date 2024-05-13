@@ -21,8 +21,13 @@ const ResumePage = () => {
       {/* topbar */}
       <Topbar label="README.md" icon={<ReadCvLogo size={24} />} />
       {/* page content */}
-      <Box my="sm">
-        <Center>Coming Soon...</Center>
+      <Box my="sm" mih='100vh'>
+        {/* <Center>Coming Soon...</Center> */}
+        <iframe
+          src="/Dipankar-Paul-Resume_2024-05-13.pdf"
+          width="100%"
+          height="1200px"
+        />
       </Box>
     </Box>
   );
