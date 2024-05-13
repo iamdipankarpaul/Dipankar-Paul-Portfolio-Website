@@ -51,7 +51,11 @@ const ProjectPage = () => {
       {/* topbar */}
       <Topbar label={project.title} />
       {/* project details body */}
-      <Box py={{ base: "sm", sm: "md" }} px="xs">
+      <Box
+        pt={{ base: "sm", sm: "md", md: "lg" }}
+        px={{ base: 0, sm: "xs" }}
+        pb={{ base: 0, sm: "xs" }}
+      >
         {/* author's warnings or notes */}
 
         {project.warning && (

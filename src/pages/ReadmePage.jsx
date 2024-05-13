@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Box, Divider, Text, Anchor } from "@mantine/core";
-import { Helmet } from "react-helmet-async";
 
 // icon
 import { BookOpen } from "@phosphor-icons/react";
@@ -55,9 +54,9 @@ const ReadmePage = () => {
       <Topbar label="README.md" icon={<BookOpen size={24} />} />
       {/* body */}
       <Box
-        py={{ base: "sm", sm: "md", md: "lg", lg: "xl" }}
-        pr={{ base: "xs", sm: "md" }}
-        pl="xs"
+        pt={{ base: "sm", sm: "md", md: "lg", lg: "xl" }}
+        px={{ base: 0, sm: "xs" }}
+        pb={{ base: 0, sm: "xs" }}
       >
         {/* readme header section */}
         <section aria-label="Readme header section">
@@ -109,12 +108,21 @@ const ReadmePage = () => {
         />
 
         {/* blogs */}
-        <ReadmeSection
-          titleText={"Letest Blogs"}
-          blogList={blogs}
-          linkText="All Blogs"
-          linkTo="/blogs"
-        />
+        {blogsError ? (
+          <ReadmeSection
+            titleText={"Letest Blogs"}
+            bodyContent="Fail to fetch blogs."
+            linkText="All Blogs"
+            linkTo="/blogs"
+          />
+        ) : (
+          <ReadmeSection
+            titleText={"Letest Blogs"}
+            blogList={blogs}
+            linkText="All Blogs"
+            linkTo="/blogs"
+          />
+        )}
       </Box>
     </Box>
   );

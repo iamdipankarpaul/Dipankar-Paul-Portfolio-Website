@@ -8,6 +8,7 @@ import {
   Button,
   Center,
   Group,
+  Loader,
 } from "@mantine/core";
 import { useScrollIntoView } from "@mantine/hooks";
 import { Article } from "@phosphor-icons/react";
@@ -18,6 +19,7 @@ import classes from "./pages.module.css";
 import Topbar from "../components/Topbar";
 import BlogList from "../components/BlogList";
 import fetchBlogs from "../utils/fetchBlogs";
+import waait from "../utils/waait";
 
 const BlogsPage = () => {
   const [loading, setLoading] = useState(false);
@@ -41,6 +43,7 @@ const BlogsPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
+      await waait(500);
       try {
         const blogsData = await fetchBlogs();
         setBlogs([...blogsData]);
@@ -124,11 +127,15 @@ const BlogsPage = () => {
       {/* topbar */}
       <Topbar label="Blogs" icon={<Article size={24} />} />
       {/* blog page content */}
-      <Box py={{ base: "sm", sm: "lg" }} px={{ base: "xs", sm: "lg" }}>
+      <Box
+        pt={{ base: "sm", sm: "md", md: "lg" }}
+        px={{ base: 0, sm: "xs" }}
+        pb={{ base: 0, sm: "xs" }}
+      >
         {/* loading */}
         {loading && (
           <Center>
-            <Text>Loading</Text>
+            <Loader color="blue" size="lg" type="dots" />
           </Center>
         )}
 

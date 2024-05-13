@@ -34,7 +34,11 @@ const ContactPage = () => {
       {/* topbar */}
       <Topbar label="Contact Me" icon={<PaperPlaneTilt size={24} />} />
       {/* page body */}
-      <Box py={{ base: "sm", sm: "lg" }} px={{ base: "xs", sm: "lg" }}>
+      <Box
+        pt={{ base: "sm", sm: "md", md: "lg" }}
+        px={{ base: 0, sm: "xs" }}
+        pb={{ base: 0, sm: "xs" }}
+      >
         <Flex
           direction={{ base: "column", md: "row" }}
           gap={{ base: "sm", sm: "lg" }}

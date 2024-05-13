@@ -57,7 +57,11 @@ const ProjectsPage = () => {
       </Helmet>
       <Topbar label="Projects" icon={<Folder size={24} />} />
       {/* projects body */}
-      <Box py={{ base: "sm", sm: "md" }} px="xs">
+      <Box
+        pt={{ base: "sm", sm: "md" }}
+        px={{ base: 0, sm: "xs" }}
+        pb={{ base: 0, sm: "xs" }}
+      >
         {/* search and sort */}
         <Box>
           <Flex

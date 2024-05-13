@@ -2,7 +2,7 @@ import { Group, Title, Divider, Box } from "@mantine/core";
 
 const Topbar = ({ label, icon }) => {
   return (
-    <Box mx="xs">
+    <Box mx={{ base: 0, sm: "xs" }}>
       <Group py="xs" gap="xs">
         {icon}
         <Title fz="h4" fw={500}>
