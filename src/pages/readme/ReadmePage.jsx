@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-import { Box, Divider, Text } from "@mantine/core";
+import { Link } from "react-router-dom";
+import { Box, Divider, Text, Anchor } from "@mantine/core";
+
 // icon
 import { BookOpen } from "@phosphor-icons/react";
 
@@ -55,18 +57,33 @@ const ReadmePage = () => {
         pr={{ base: "xs", sm: "md" }}
         pl="xs"
       >
+        {/* readme header section */}
         <section aria-label="Readme header section">
           <Box pl={{ base: 0, sm: "lg" }}>
             <NameAnimation />
           </Box>
           <Box pl={{ base: 0, sm: "xl" }}>
             <Divider mb="sm" />
-            <Text fz="xl">{personalData.designation}</Text>
+            <Text fz="xl">
+              {personalData.designation}{" "}
+              <Link to="/contact" className={classes.header_links}>
+                Contact me
+              </Link>{" "}
+              for opportunities or{" "}
+              <Anchor
+                fz="xl"
+                underline="never"
+                href={personalData.resume}
+                download="Dipankar-Paul-Resume"
+              >
+                download
+              </Anchor>{" "}
+              my resume.
+            </Text>
           </Box>
         </section>
 
         {/* about me */}
-
         {personalData.aboutMe.map((about) => (
           <ReadmeSection
             key={about.id}
@@ -88,7 +105,7 @@ const ReadmePage = () => {
           linkText="All Projects"
           linkTo="/projects"
         />
-        
+
         {/* blogs */}
         <ReadmeSection
           titleText={"Letest Blogs"}

@@ -18,7 +18,7 @@ const personalData = {
   },
   socialLinks,
   projects,
-  resume: "...",
+  resume: "/Dipankar-Paul-Resume_2024-05-13.pdf",
   location: "Falakata, West Bengal, India",
 };
 

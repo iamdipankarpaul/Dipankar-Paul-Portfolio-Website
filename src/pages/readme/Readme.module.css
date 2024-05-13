@@ -7,3 +7,8 @@
   border-radius: var(--mantine-radius-md);
   padding: var(--mantine-spacing-xs);
 }
+
+.header_links {
+  color: var(--mantine-color-anchor);
+  text-decoration: none;
+}
