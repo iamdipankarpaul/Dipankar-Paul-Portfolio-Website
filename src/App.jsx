@@ -2,6 +2,7 @@ import "@mantine/core/styles.css";
 import "@mantine/carousel/styles.css";
 import { MantineProvider } from "@mantine/core";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 
 // layout
 import AppLayout from "./layout/AppLayout";
@@ -67,7 +68,9 @@ function App() {
       defaultColorScheme="dark"
       cssVariablesResolver={variableResolver}
     >
-      <RouterProvider router={router} />
+      <HelmetProvider>
+        <RouterProvider router={router} />
+      </HelmetProvider>
     </MantineProvider>
   );
 }

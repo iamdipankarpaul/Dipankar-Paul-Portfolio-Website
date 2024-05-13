@@ -11,6 +11,7 @@ import {
 } from "@mantine/core";
 import { useScrollIntoView } from "@mantine/hooks";
 import { Article } from "@phosphor-icons/react";
+import { Helmet } from "react-helmet-async";
 
 import classes from "./pages.module.css";
 
@@ -112,6 +113,15 @@ const BlogsPage = () => {
 
   return (
     <Box className={classes.wrapper} ref={wrapperRef}>
+      {/* seo */}
+      <Helmet>
+        <title>Dipankar Paul's Blogs</title>
+        <meta
+          name="description"
+          content="Explore my journey as a frontend developer and blog writer. Discover my projects, read my tech blogs, and get in touch. Let's connect and create something amazing together!"
+        />
+      </Helmet>
+      {/* topbar */}
       <Topbar label="Blogs" icon={<Article size={24} />} />
       {/* blog page content */}
       <Box py={{ base: "sm", sm: "lg" }} px={{ base: "xs", sm: "lg" }}>

@@ -13,6 +13,7 @@ import {
 import { Carousel } from "@mantine/carousel";
 import { useScrollIntoView } from "@mantine/hooks";
 import { Warning } from "@phosphor-icons/react";
+import { Helmet } from "react-helmet-async";
 
 import classes from "./pages.module.css";
 
@@ -39,6 +40,15 @@ const ProjectPage = () => {
 
   return (
     <Box className={classes.wrapper} ref={wrapperRef}>
+      {/* seo */}
+      <Helmet>
+        <title>Dipankar Paul's Project - {project.title}</title>
+        <meta
+          name="description"
+          content={`Explore the details and technologies used in my ${project.title} project. Discover the features, showcasing my skills in frontend development and creative problem-solving.`}
+        />
+      </Helmet>
+      {/* topbar */}
       <Topbar label={project.title} />
       {/* project details body */}
       <Box py={{ base: "sm", sm: "md" }} px="xs">

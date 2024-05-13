@@ -1,6 +1,6 @@
 const projects = [
   {
-    title: "ReAPI Clint",
+    title: "ReAPI Client",
     description:
       "A simple Postman alternative, a popular API testing tool, built using React. This project aims to provide a user-friendly interface for making API requests and visualizing responses.",
     features: [

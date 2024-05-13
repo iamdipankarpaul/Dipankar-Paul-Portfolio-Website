@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Box, Flex, Divider } from "@mantine/core";
 import { useScrollIntoView } from "@mantine/hooks";
 import { PaperPlaneTilt } from "@phosphor-icons/react";
+import { Helmet } from "react-helmet-async";
 
 import classes from "./pages.module.css";
 
@@ -22,6 +23,15 @@ const ContactPage = () => {
 
   return (
     <Box className={classes.wrapper} ref={wrapperRef}>
+      {/* seo */}
+      <Helmet>
+        <title>Get in Touch with Dipankar Paul</title>
+        <meta
+          name="description"
+          content="Reach out to me for any opportunities, inquiries, or just to say hello. Fill out the contact form or connect through social media to start a conversation. I look forward to hearing from you!"
+        />
+      </Helmet>
+      {/* topbar */}
       <Topbar label="Contact Me" icon={<PaperPlaneTilt size={24} />} />
       {/* page body */}
       <Box py={{ base: "sm", sm: "lg" }} px={{ base: "xs", sm: "lg" }}>

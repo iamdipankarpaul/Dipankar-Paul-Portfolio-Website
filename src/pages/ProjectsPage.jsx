@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Box, MultiSelect, Select, Flex } from "@mantine/core";
 import { useScrollIntoView } from "@mantine/hooks";
 import { Folder } from "@phosphor-icons/react";
+import { Helmet } from "react-helmet-async";
 
 import classes from "./pages.module.css";
 
@@ -46,6 +47,14 @@ const ProjectsPage = () => {
 
   return (
     <Box className={classes.wrapper} ref={wrapperRef}>
+      {/* seo */}
+      <Helmet>
+        <title>Dipankar Paul's Projects</title>
+        <meta
+          name="description"
+          content="Explore a collection of my innovative projects showcasing my skills in frontend development and creative problem-solving. Each project demonstrates my commitment to delivering engaging user experiences and technical excellence."
+        />
+      </Helmet>
       <Topbar label="Projects" icon={<Folder size={24} />} />
       {/* projects body */}
       <Box py={{ base: "sm", sm: "md" }} px="xs">

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Box, Divider, Text, Anchor } from "@mantine/core";
+import { Helmet } from "react-helmet-async";
 
 // icon
 import { BookOpen } from "@phosphor-icons/react";
@@ -50,6 +51,7 @@ const ReadmePage = () => {
 
   return (
     <Box className={classes.wrapper}>
+      {/* topbar */}
       <Topbar label="README.md" icon={<BookOpen size={24} />} />
       {/* body */}
       <Box
@@ -69,7 +71,7 @@ const ReadmePage = () => {
               <Link to="/contact" className={classes.readme_header_links}>
                 Contact me
               </Link>{" "}
-              for opportunities or{" "}
+              for any opportunities or{" "}
               <Anchor
                 fz="xl"
                 underline="never"
