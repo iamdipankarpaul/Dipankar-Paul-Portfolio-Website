@@ -1,3 +1,5 @@
+/* import classes from "../pages.module.css"; */
+
 .wrapper {
   border: 1px solid;
   border-color: light-dark(
@@ -6,4 +8,10 @@
   );
   border-radius: var(--mantine-radius-md);
   padding: var(--mantine-spacing-xs);
+}
+
+/* readme page styles */
+.readme_header_links {
+  color: var(--mantine-color-anchor);
+  text-decoration: none;
 }

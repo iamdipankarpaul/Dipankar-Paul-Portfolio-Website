@@ -12,11 +12,11 @@ import {
 import { useScrollIntoView } from "@mantine/hooks";
 import { Article } from "@phosphor-icons/react";
 
-import classes from "./Blogs.module.css";
+import classes from "./pages.module.css";
 
-import Topbar from "../../components/Topbar";
-import BlogList from "../../components/BlogList";
-import fetchBlogs from "../../utils/fetchBlogs";
+import Topbar from "../components/Topbar";
+import BlogList from "../components/BlogList";
+import fetchBlogs from "../utils/fetchBlogs";
 
 const BlogsPage = () => {
   const [loading, setLoading] = useState(false);

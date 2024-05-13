@@ -6,16 +6,16 @@ import { Box, Divider, Text, Anchor } from "@mantine/core";
 import { BookOpen } from "@phosphor-icons/react";
 
 // styles
-import classes from "./Readme.module.css";
+import classes from "./pages.module.css";
 
 // components
-import Topbar from "../../components/Topbar";
-import NameAnimation from "../../components/NameAnimation";
-import ReadmeSection from "../../components/ReadmeSection";
+import Topbar from "../components/Topbar";
+import NameAnimation from "../components/NameAnimation";
+import ReadmeSection from "../components/ReadmeSection";
 
 // constants
-import personalData from "../../constants";
-import fetchBlogs from "../../utils/fetchBlogs";
+import personalData from "../constants";
+import fetchBlogs from "../utils/fetchBlogs";
 
 const ReadmePage = () => {
   const [blogs, setBlogs] = useState([]);
@@ -66,7 +66,7 @@ const ReadmePage = () => {
             <Divider mb="sm" />
             <Text fz="xl">
               {personalData.designation}{" "}
-              <Link to="/contact" className={classes.header_links}>
+              <Link to="/contact" className={classes.readme_header_links}>
                 Contact me
               </Link>{" "}
               for opportunities or{" "}

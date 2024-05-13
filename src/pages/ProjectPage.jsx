@@ -14,12 +14,13 @@ import { Carousel } from "@mantine/carousel";
 import { useScrollIntoView } from "@mantine/hooks";
 import { Warning } from "@phosphor-icons/react";
 
-import classes from "./Project.module.css";
-import personalData from "../../constants";
-import Topbar from "../../components/Topbar";
-import CarouselImage from "../../components/CarouselImage";
-import SectionTitle from "../../components/SectionTitle";
-import formatDate from "../../utils/formatDate";
+import classes from "./pages.module.css";
+
+import personalData from "../constants";
+import Topbar from "../components/Topbar";
+import CarouselImage from "../components/CarouselImage";
+import SectionTitle from "../components/SectionTitle";
+import formatDate from "../utils/formatDate";
 
 const ProjectPage = () => {
   const [closeWarningAlert, setCloseWarningAlert] = useState(false);

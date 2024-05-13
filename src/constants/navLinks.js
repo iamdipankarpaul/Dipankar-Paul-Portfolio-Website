@@ -5,6 +5,7 @@ import {
   BookOpen,
   Folder,
   PaperPlaneTilt,
+  ReadCvLogo
 } from "@phosphor-icons/react";
 
 const navLinks = [
@@ -14,6 +15,13 @@ const navLinks = [
     label: "README.md",
     leftIcon: BookOpen,
     ariaLabel: "navlink to go to README.md page",
+  },
+  {
+    id: randomId(),
+    to: "/resume",
+    label: "Resume",
+    leftIcon: ReadCvLogo,
+    ariaLabel: "navlink to go to resume page",
   },
   {
     id: randomId(),

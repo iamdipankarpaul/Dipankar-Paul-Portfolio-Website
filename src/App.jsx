@@ -1,21 +1,21 @@
 import "@mantine/core/styles.css";
 import "@mantine/carousel/styles.css";
 import { MantineProvider } from "@mantine/core";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // layout
 import AppLayout from "./layout/AppLayout";
 
 // pages
-import ReadmePage from "./pages/readme/ReadmePage.jsx";
-import ProjectsPage from "./pages/projects/ProjectsPage.jsx";
-import ProjectPage from "./pages/project/ProjectPage.jsx";
-import BlogsPage from "./pages/blogs/BlogsPage.jsx";
-import ContactPage from "./pages/contact/ContactPage.jsx";
+import ReadmePage from "./pages/ReadmePage.jsx";
+import ProjectsPage from "./pages/ProjectsPage.jsx";
+import ProjectPage from "./pages/ProjectPage.jsx";
+import BlogsPage from "./pages/BlogsPage.jsx";
+import ContactPage from "./pages/ContactPage.jsx";
 
 // theme styles
 import theme, { variableResolver } from "./theme.js";
+import ResumePage from "./pages/ResumePage.jsx";
 
 // router configuration
 const router = createBrowserRouter([
@@ -42,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <ContactPage />,
+      },
+      {
+        path: "resume",
+        element: <ResumePage />,
       },
     ],
   },

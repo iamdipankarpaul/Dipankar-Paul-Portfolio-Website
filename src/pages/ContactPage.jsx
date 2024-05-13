@@ -3,12 +3,12 @@ import { Box, Flex, Divider } from "@mantine/core";
 import { useScrollIntoView } from "@mantine/hooks";
 import { PaperPlaneTilt } from "@phosphor-icons/react";
 
-import classes from "./Contact.module.css";
+import classes from "./pages.module.css";
 
-import Topbar from "../../components/Topbar";
-import ContactForm from "../../components/ContactForm";
-import ContactDetails from "../../components/ContactDetails";
-import personalData from "../../constants";
+import Topbar from "../components/Topbar";
+import ContactForm from "../components/ContactForm";
+import ContactDetails from "../components/ContactDetails";
+import personalData from "../constants";
 
 const ContactPage = () => {
   const { scrollIntoView, targetRef: wrapperRef } = useScrollIntoView({

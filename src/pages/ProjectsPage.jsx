@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { Box, MultiSelect, Select, Flex } from "@mantine/core";
+import { useScrollIntoView } from "@mantine/hooks";
 import { Folder } from "@phosphor-icons/react";
 
-import classes from "./Projects.module.css";
-import Topbar from "../../components/Topbar";
-import personalData from "../../constants";
-import ProjectList from "../../components/ProjectList";
-import { useScrollIntoView } from "@mantine/hooks";
+import classes from "./pages.module.css";
+
+import Topbar from "../components/Topbar";
+import personalData from "../constants";
+import ProjectList from "../components/ProjectList";
 
 const ProjectsPage = () => {
   const [selectedTags, setSelectedTags] = useState([]);
