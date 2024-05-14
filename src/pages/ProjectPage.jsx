@@ -129,27 +129,25 @@ const ProjectPage = () => {
           <Box>
             <SectionTitle text="Links" baseAs="h4" smAs="h3" />
             <SimpleGrid maw="400px" cols={2} mt="xs">
-              <Box>
-                <Button
-                  variant="light"
-                  fullWidth
-                  component={Link}
-                  to={project.links.demo}
-                  target="_blank"
-                >
-                  Live
-                </Button>
-              </Box>
-              <Box>
-                <Button
-                  component={Link}
-                  to={project.links.github}
-                  target="_blank"
-                  fullWidth
-                >
-                  GitHub
-                </Button>
-              </Box>
+              {/* github link */}
+              <Button
+                component={Link}
+                to={project.links.github}
+                target="_blank"
+                fullWidth
+                variant="light"
+              >
+                GitHub
+              </Button>
+              {/* demo link */}
+              <Button
+                fullWidth
+                component={Link}
+                to={project.links.demo}
+                target="_blank"
+              >
+                Live
+              </Button>
             </SimpleGrid>
           </Box>
         </Box>
