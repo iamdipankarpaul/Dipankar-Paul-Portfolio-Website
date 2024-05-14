@@ -17,7 +17,7 @@ const SectionTitle = ({
   const navigate = useNavigate();
 
   return (
-    <Flex align="center" justify="space-between" pr="sm">
+    <Flex align="center" justify="space-between">
       <Flex align="center" ref={ref} gap="5px">
         {!isMobile && <Link size={20} style={{ opacity: hovered ? 1 : 0.2 }} />}
         <Title
