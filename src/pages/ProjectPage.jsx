@@ -128,7 +128,7 @@ const ProjectPage = () => {
           {/* links */}
           <Box>
             <SectionTitle text="Links" baseAs="h4" smAs="h3" />
-            <SimpleGrid cols={{ base: 1, sm: 3, lg: 5 }} mt="xs">
+            <SimpleGrid maw="400px" cols={2} mt="xs">
               <Box>
                 <Button
                   variant="light"

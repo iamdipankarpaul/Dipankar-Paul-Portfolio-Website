@@ -13,6 +13,7 @@ import ProjectsPage from "./pages/ProjectsPage.jsx";
 import ProjectPage from "./pages/ProjectPage.jsx";
 import BlogsPage from "./pages/BlogsPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
+import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 // theme styles
 import theme, { variableResolver } from "./theme.js";
@@ -47,12 +48,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: (
-      <div>
-        <h1>404</h1>
-        <h3>Page Note Found.</h3>
-      </div>
-    ),
+    element: <NotFoundPage />,
   },
 ]);
 
