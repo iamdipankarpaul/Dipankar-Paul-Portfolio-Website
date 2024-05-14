@@ -1,5 +1,4 @@
-/* import classes from "../pages.module.css"; */
-
+/* common styles */
 .wrapper {
   border: 1px solid;
   border-color: light-dark(

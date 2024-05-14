@@ -1,0 +1,24 @@
+.preloader {
+  background-color: var(--mantine-color-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  position: fixed;
+}
+
+.progress_bar {
+  z-index: 99999;
+  border-radius: 20px;
+  overflow: hidden;
+  /* background-color: light-dark(#0d1117, #ffffff); */
+  background-color: light-dark(
+    var(--mantine-color-dark-4),
+    var(--mantine-color-gray-3)
+  );
+}
+
+.progress {
+  background-color: var(--mantine-color-blue-6);
+  z-index: 99999;
+}
