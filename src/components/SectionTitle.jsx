@@ -1,6 +1,6 @@
 import { Title, Flex, Text } from "@mantine/core";
 import { useHover, useMediaQuery } from "@mantine/hooks";
-import { Link } from "@phosphor-icons/react";
+import { CaretRight, Link } from "@phosphor-icons/react";
 import { useNavigate } from "react-router-dom";
 
 const SectionTitle = ({
@@ -30,8 +30,13 @@ const SectionTitle = ({
         </Title>
       </Flex>
       {linkText && linkTo && (
-        <Text onClick={() => navigate(linkTo)} style={{ cursor: "pointer" }} data-clickable>
-          {linkText}
+        <Text
+          c="blue"
+          onClick={() => navigate(linkTo)}
+          style={{ cursor: "pointer" }}
+        >
+          {linkText}{" "}
+          <CaretRight size={16} style={{ verticalAlign: "text-bottom" }} />
         </Text>
       )}
     </Flex>
