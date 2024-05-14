@@ -83,7 +83,7 @@ const ProjectPage = () => {
           </Carousel>
         </Box>
         {/* project details */}
-        <Box my="md" px="xs">
+        <Box my="md" px={{ base: 0, sm: "xs" }}>
           {/* title date */}
           <Box mb={{ base: "xs", sm: 0 }}>
             <Flex
