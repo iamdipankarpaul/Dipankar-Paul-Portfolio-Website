@@ -29,11 +29,11 @@ function Preloader({ setLoading }) {
       width: `${randomStop * 100}%`,
     });
     tl.to(progressRef.current, {
-      duration: 1 - randomStop,
+      duration: 1,
       width: "100%",
     });
     tl.to(progressBarRef.current, {
-      duration: 0.5,
+      duration: 1,
       opacity: 0,
     });
     tl.to(preloaderRef.current, {
@@ -47,6 +47,10 @@ function Preloader({ setLoading }) {
 
   let percentage = (progressWidth / progressBarWidth) * 100;
   let displayPercentage = !isNaN(percentage) ? Math.round(percentage) : 0;
+  let displayText =
+    displayPercentage < 100
+      ? `You are ${displayPercentage}% there`
+      : `Welcome to my portfolio`;
 
   return (
     <Box
@@ -58,12 +62,8 @@ function Preloader({ setLoading }) {
     >
       <Box ta="center" w="100%">
         <Title fz={{ base: "h2", sm: "h1" }} mb={20}>
-          {displayPercentage < 100
-            ? `You are ${displayPercentage}% there`
-            : `Welcome to my portfolio`}
+          {displayText}
         </Title>
-        {/* displayPercentage < 100 ? `You are ${displayPercentage}% there` : `Welcome to my portfolio` */}
-        {/* keep the progress bar centered */}
         <Center>
           <Box
             w="30%"
