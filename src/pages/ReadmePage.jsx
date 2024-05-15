@@ -56,14 +56,14 @@ const ReadmePage = () => {
       <Box
         pt={{ base: "sm", sm: "md", md: "lg", lg: "xl" }}
         pb={{ base: 0, sm: "xs" }}
-        px="xs"
+        px={{ base: 0, xs: "xs" }}
       >
         {/* readme header section */}
         <section aria-label="Readme header section">
-          <Box pl={{ base: 0, sm: "lg" }}>
+          <Box pl={{ base: 0, sm: "md" }}>
             <NameAnimation />
           </Box>
-          <Box pl={{ base: 0, sm: "xl" }}>
+          <Box pl={{ base: 0, sm: "lg" }}>
             <Divider mb="sm" />
             <Text fz="xl">
               {personalData.designation}{" "}

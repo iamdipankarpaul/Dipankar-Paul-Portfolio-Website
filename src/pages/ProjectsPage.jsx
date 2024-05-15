@@ -60,7 +60,7 @@ const ProjectsPage = () => {
       <Box
         pt={{ base: "sm", sm: "md" }}
         pb={{ base: 0, sm: "xs" }}
-        px="xs"
+        px={{ base: 0, xs: "xs" }}
       >
         {/* search and sort */}
         <Box>

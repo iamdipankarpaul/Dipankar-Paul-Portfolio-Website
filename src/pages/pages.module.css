@@ -7,6 +7,12 @@
   );
   border-radius: var(--mantine-radius-md);
   padding: var(--mantine-spacing-xs);
+
+  @media (max-width: 36em) {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+  }
 }
 
 /* readme page styles */
