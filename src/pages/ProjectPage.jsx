@@ -106,12 +106,17 @@ const ProjectPage = () => {
           {/* features */}
           <Box>
             <SectionTitle text="Features" baseAs="h4" smAs="h3" />
-            <List type="ordered" withPadding>
+            <List
+              type="ordered"
+              withPadding
+              className={classes.project_feature_list}
+            >
               {project.features.map((feature, idx) => (
                 <List.Item key={idx}>
                   <Text size="lg">{feature}</Text>
                 </List.Item>
               ))}
+              {/* fz={{base: "md", sm: "lg"}} */}
             </List>
           </Box>
           {/* tags */}
