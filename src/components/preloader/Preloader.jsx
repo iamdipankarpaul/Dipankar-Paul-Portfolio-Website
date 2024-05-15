@@ -58,8 +58,11 @@ function Preloader({ setLoading }) {
     >
       <Box ta="center" w="100%">
         <Title fz={{ base: "h2", sm: "h1" }} mb={20}>
-          {`You are ${displayPercentage}% there`}
+          {displayPercentage < 100
+            ? `You are ${displayPercentage}% there`
+            : `Welcome to my portfolio`}
         </Title>
+        {/* displayPercentage < 100 ? `You are ${displayPercentage}% there` : `Welcome to my portfolio` */}
         {/* keep the progress bar centered */}
         <Center>
           <Box
