@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { Box, Title, Center } from "@mantine/core";
+import { useElementSize, useMergedRef } from "@mantine/hooks";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -10,6 +11,14 @@ function Preloader({ setLoading }) {
   const preloaderRef = useRef(null);
   const progressBarRef = useRef(null);
   const progressRef = useRef(null);
+
+  // get element sizes
+  const { ref: progressBarSizeRef, width: progressBarWidth } = useElementSize();
+  const { ref: progressSizeRef, width: progressWidth } = useElementSize();
+
+  // marge hooks
+  const mergedProgressBarRef = useMergedRef(progressBarRef, progressBarSizeRef);
+  const mergedProgressRef = useMergedRef(progressRef, progressSizeRef);
 
   useGSAP(() => {
     const randomStop = Math.random() * (0.8 - 0.3) + 0.3;
@@ -36,6 +45,9 @@ function Preloader({ setLoading }) {
     });
   }, [setLoading]);
 
+  let percentage = (progressWidth / progressBarWidth) * 100;
+  let displayPercentage = !isNaN(percentage) ? Math.round(percentage) : 0;
+
   return (
     <Box
       w="100%"
@@ -46,7 +58,7 @@ function Preloader({ setLoading }) {
     >
       <Box ta="center" w="100%">
         <Title fz={{ base: "h2", sm: "h1" }} mb={20}>
-          Welcome to My Portfolio
+          {`You are ${displayPercentage}% there`}
         </Title>
         {/* keep the progress bar centered */}
         <Center>
@@ -54,14 +66,14 @@ function Preloader({ setLoading }) {
             w="30%"
             miw="200px"
             h={{ base: "5px", sm: "8px" }}
-            ref={progressBarRef}
+            ref={mergedProgressBarRef}
             className={styles.progress_bar}
             aria-label="pre-loader progress bar"
           >
             <Box
               w={0}
               h="100%"
-              ref={progressRef}
+              ref={mergedProgressRef}
               className={styles.progress}
               role="progressbar"
               aria-valuemin="0"
