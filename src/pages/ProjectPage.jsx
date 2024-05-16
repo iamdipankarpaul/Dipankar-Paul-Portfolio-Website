@@ -52,7 +52,7 @@ const ProjectPage = () => {
       <Topbar label={project.title} />
       {/* project details body */}
       <Box
-        pt={{ base: 0, sm: "md", md: "lg" }}
+        pt={{ base: "xs", sm: "md", md: "lg" }}
         pb={{ base: 0, sm: "xs" }}
         px={{ base: 0, xs: "xs" }}
       >

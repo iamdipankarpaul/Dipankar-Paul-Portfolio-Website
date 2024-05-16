@@ -58,7 +58,7 @@ const ProjectsPage = () => {
       <Topbar label="Projects" icon={<Folder size={24} />} />
       {/* projects body */}
       <Box
-        pt={{ base: 0, sm: "md" }}
+        pt={{ base: "xs", sm: "md" }}
         pb={{ base: 0, sm: "xs" }}
         px={{ base: 0, xs: "xs" }}
       >

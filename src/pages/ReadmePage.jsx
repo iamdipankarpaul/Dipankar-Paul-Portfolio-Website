@@ -54,7 +54,7 @@ const ReadmePage = () => {
       <Topbar label="README.md" icon={<BookOpen size={24} />} />
       {/* body */}
       <Box
-        pt={{ base: 0, sm: "md", md: "lg", lg: "xl" }}
+        pt={{ base: "xs", sm: "md", md: "lg", lg: "xl" }}
         pb={{ base: 0, sm: "xs" }}
         px={{ base: 0, xs: "xs" }}
       >
