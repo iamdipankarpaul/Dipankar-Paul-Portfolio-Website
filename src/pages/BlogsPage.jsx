@@ -128,7 +128,7 @@ const BlogsPage = () => {
       <Topbar label="Blogs" icon={<Article size={24} />} />
       {/* blog page content */}
       <Box
-        pt={{ base: "sm", sm: "md", md: "lg" }}
+        pt={{ base: 0, sm: "md", md: "lg" }}
         pb={{ base: 0, sm: "xs" }}
         px={{ base: 0, xs: "xs" }}
       >
