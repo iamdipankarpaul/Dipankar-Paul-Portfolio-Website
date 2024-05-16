@@ -70,14 +70,15 @@ const ReadmePage = () => {
               <Link to="/contact" className={classes.readme_header_links}>
                 Contact me
               </Link>{" "}
-              for any opportunities or{" "}
+              for opportunities or{" "}
               <Anchor
                 fz="xl"
                 underline="never"
-                href={personalData.resume}
-                download="Dipankar-Paul-Resume"
+                href={`/${personalData.resume}`}
+                target="_blank"
+                // download="Dipankar-Paul-Resume"
               >
-                download
+                view/download
               </Anchor>{" "}
               my resume.
             </Text>

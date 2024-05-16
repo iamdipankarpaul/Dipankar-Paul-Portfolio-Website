@@ -11,7 +11,7 @@ const ContactDetails = ({ personalData }) => {
       <Box pl={{ base: 0, sm: "lg" }}>
         <Text mt="xs" mb='md' fz="lg">
           {/* Fill in the form to start a conversation */}
-          Have a question or just want to connect? Don't hesitate to reach out! You can use the form or email me directly. I'm excited to hear from you!
+          Got questions, comments, feedback or just want to connect? Don't hesitate to reach out! You can use the form or email me directly. I'm excited to hear from you!
         </Text>
         <List>
           <ContactDetailsItem

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Box, Flex, ActionIcon, Group, Tooltip, Text } from "@mantine/core";
+import { Smiley } from "@phosphor-icons/react";
 
 import classes from "./AppLayout.module.css";
 import personalData from "../constants";
@@ -14,9 +15,15 @@ const AppFooter = () => {
         align="center"
         gap={10}
       >
+        {/* footer left text */}
         <Box>
-          <Text fw={500}>Made by me, Dipankar Paul.</Text>
+          <Flex gap={5} align="center">
+            <Text fw={500}>Thanks for visiting!</Text>
+            <Smiley size={20} weight="bold" />
+          </Flex>
         </Box>
+
+        {/* social icons */}
         <Box>
           <Group>
             {personalData.socialLinks.map((item) => (
@@ -36,10 +43,13 @@ const AppFooter = () => {
             ))}
           </Group>
         </Box>
+
+        {/* footer right text */}
         <Box>
+          <Text size="sm">Developd by me, Dipankar Paul.</Text>
           <Text size="sm">
             &copy;{" "}
-            {`Copyright ${new Date().getFullYear()}. All Rights Reserved.`}
+            {`Copyright ${new Date().getFullYear()} - All Rights Reserved.`}
           </Text>
         </Box>
       </Flex>
