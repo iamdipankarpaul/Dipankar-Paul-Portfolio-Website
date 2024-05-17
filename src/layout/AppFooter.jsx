@@ -46,7 +46,7 @@ const AppFooter = () => {
 
         {/* footer right text */}
         <Box>
-          <Text size="sm">Developd by me, Dipankar Paul.</Text>
+          <Text size="sm">Developed by me, Dipankar Paul.</Text>
           <Text size="sm">
             &copy;{" "}
             {`Copyright ${new Date().getFullYear()} - All Rights Reserved.`}
