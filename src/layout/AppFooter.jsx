@@ -18,7 +18,7 @@ const AppFooter = () => {
         {/* footer left text */}
         <Box>
           <Flex gap={5} align="center">
-            <Text fw={500}>Thanks for visiting!</Text>
+            <Text fw={500}>Thanks for visiting</Text>
             <Smiley size={20} weight="bold" />
           </Flex>
         </Box>
