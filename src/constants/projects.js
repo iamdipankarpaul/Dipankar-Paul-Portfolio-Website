@@ -27,7 +27,12 @@ const projects = [
     },
     slug: "weatherwise",
     images: [
-      
+      "https://res.cloudinary.com/dysni0qfj/image/upload/v1719298520/WeatherWise/WeatherWise-1_le7eob.png",
+      "https://res.cloudinary.com/dysni0qfj/image/upload/v1719298879/WeatherWise/WeatherWise-5_wrnutv.png",
+      "https://res.cloudinary.com/dysni0qfj/image/upload/v1719298501/WeatherWise/WeatherWise-2_u6yqyf.png",
+      "https://res.cloudinary.com/dysni0qfj/image/upload/v1719298879/WeatherWise/WeatherWise-6_fjxycw.png",
+      "https://res.cloudinary.com/dysni0qfj/image/upload/v1719298502/WeatherWise/WeatherWise-4_q12glh.png",
+      "https://res.cloudinary.com/dysni0qfj/image/upload/v1719299016/WeatherWise/WeatherWise-7_v8i5m1.png",
     ],
     date: "2024-05-29",
     pinned: true,
