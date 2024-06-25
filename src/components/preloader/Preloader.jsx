@@ -25,7 +25,7 @@ function Preloader({ setLoading }) {
 
     const tl = gsap.timeline();
     tl.to(progressRef.current, {
-      duration: 2,
+      duration: 1.5,
       width: `${randomStop * 100}%`,
     });
     tl.to(progressRef.current, {
