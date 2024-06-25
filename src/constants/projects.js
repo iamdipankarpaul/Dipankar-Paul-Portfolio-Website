@@ -1,5 +1,42 @@
 const projects = [
   {
+    title: "Newsly",
+    description:
+      "Newsly, a React news app that I developed as part of an assignment given by Persist Ventures for an internship role (within 2 days). It provide users with latest news articles from various sources.",
+    features: [
+      "Displays latest news articles with headlines, images, and short descriptions",
+      "Users can navigate through different categories like Technology, Sports, AI, etc",
+      "Clicking on an article shows a detailed view with full article, publication date, etc",
+      "Allows users to search news articles based on keywords",
+      "Users can bookmark articles, view all bookmarked articles, and unbookmark articles",
+      "Articles can be shared on Facebook, Twitter, and LinkedIn",
+    ],
+    tags: [
+      "javascript",
+      "reactjs",
+      "Tailwind CSS",
+      "Redux toolkit",
+      "RTK query",
+      "axios",
+      "vite",
+    ],
+    links: {
+      demo: "https://newsly-react-app.vercel.app/",
+      github: "https://github.com/dipankarpaul2k/persist-venture-assignment-react-news-app.git",
+    },
+    slug: "newsly",
+    images: [
+      "https://res.cloudinary.com/dysni0qfj/image/upload/v1719333408/Newsly/newsly-1_udwonj.png",
+      "https://res.cloudinary.com/dysni0qfj/image/upload/v1719333408/Newsly/newsly-3_itnw5c.png",
+      "https://res.cloudinary.com/dysni0qfj/image/upload/v1719333407/Newsly/newsly-4_h0pmd3.png",
+      "https://res.cloudinary.com/dysni0qfj/image/upload/v1719333408/Newsly/newsly-5_a5j9tf.png",
+      "https://res.cloudinary.com/dysni0qfj/image/upload/v1719334147/Newsly/newsly-6_didrzm.png",
+      "https://res.cloudinary.com/dysni0qfj/image/upload/v1719334148/Newsly/newsly-7_xieo9o.png",
+    ],
+    date: "2024-06-25",
+    pinned: true,
+  },
+  {
     title: "WeatherWise",
     description:
       "A simple and user-friendly weather app built with React.js, providing current weather data, hourly forecasts, and daily forecasts using data from the OpenWeatherMap API and Open-Meteo API.",
@@ -234,7 +271,7 @@ const projects = [
       "https://res.cloudinary.com/dysni0qfj/image/upload/v1715191270/Landing%20Pages/cynthia-ugwu-3.png",
     ],
     date: "2023-09-10",
-    pinned: true,
+    pinned: false,
   },
 ];
 
@@ -242,36 +279,40 @@ export default projects;
 
 /*
 {
-    title: "Weather App",
+    title: "Newsly",
     description:
-      "A simple and user-friendly weather app built with React.js, providing current weather data, hourly forecasts, and daily forecasts using data from the OpenWeatherMap API and Open-Meteo API.",
+      "Newsly, a React news app that I developed as part of an assignment given by Persist Ventures for an internship role (within 2 days). It provide users with latest news articles from various sources.",
     features: [
-      "Displays the current weather conditions for a searched city.",
-      "Shows weather data for the current location",
-      "Provides weather data for the next 24 hours",
-      "Shows weather data for the upcoming days",
-      "Shows the details of the location and a map",
+      "Displays latest news articles with headlines, images, and short descriptions",
+      "Users can navigate through different categories like Technology, Sports, AI, etc",
+      "Clicking on an article shows a detailed view with full article, publication date, etc",
+      "Allows users to search news articles based on keywords",
+      "Users can bookmark articles, view all bookmarked articles, and unbookmark articles",
+      "Articles can be shared on Facebook, Twitter, and LinkedIn",
     ],
     tags: [
       "javascript",
       "reactjs",
       "Tailwind CSS",
-      "DaisyUI",
-      "mantine-hooks",
-      "leaflet",
-      "react-hot-toast",
+      "Redux toolkit",
+      "RTK query",
       "axios",
       "vite",
     ],
     links: {
-      demo: "https://weather-app-built-using-reactjs.vercel.app/",
-      github: "https://github.com/dipankarpaul2k/weather-app-react.git",
+      demo: "https://newsly-react-app.vercel.app/",
+      github: "https://github.com/dipankarpaul2k/persist-venture-assignment-react-news-app.git",
     },
-    slug: "weather-app",
+    slug: "newsly",
     images: [
-      
+      "https://res.cloudinary.com/dysni0qfj/image/upload/v1719333408/Newsly/newsly-1_udwonj.png",
+      "https://res.cloudinary.com/dysni0qfj/image/upload/v1719333408/Newsly/newsly-3_itnw5c.png",
+      "https://res.cloudinary.com/dysni0qfj/image/upload/v1719333407/Newsly/newsly-4_h0pmd3.png",
+      "https://res.cloudinary.com/dysni0qfj/image/upload/v1719333408/Newsly/newsly-5_a5j9tf.png",
+      "https://res.cloudinary.com/dysni0qfj/image/upload/v1719334147/Newsly/newsly-6_didrzm.png",
+      "https://res.cloudinary.com/dysni0qfj/image/upload/v1719334148/Newsly/newsly-7_xieo9o.png",
     ],
-    date: "2024-05-29",
+    date: "2024-06-25",
     pinned: true,
   },
 */
