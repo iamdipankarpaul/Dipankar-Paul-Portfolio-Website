@@ -73,15 +73,17 @@ const ProjectPage = () => {
         )}
 
         {/* Image carousel */}
-        <Box>
-          <Carousel withIndicators w={{ base: "100%", sm: "70%" }} mx="auto">
-            {project.images.map((src, idx) => (
-              <Carousel.Slide key={idx}>
-                <CarouselImage src={src} />
-              </Carousel.Slide>
-            ))}
-          </Carousel>
-        </Box>
+        {project.images && (
+          <Box>
+            <Carousel withIndicators w={{ base: "100%", sm: "70%" }} mx="auto">
+              {project.images.map((src, idx) => (
+                <Carousel.Slide key={idx}>
+                  <CarouselImage src={src} />
+                </Carousel.Slide>
+              ))}
+            </Carousel>
+          </Box>
+        )}
         {/* project details */}
         <Box my="md" px={{ base: 0, sm: "xs" }}>
           {/* title date */}

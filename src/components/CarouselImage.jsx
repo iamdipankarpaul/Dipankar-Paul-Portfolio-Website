@@ -7,7 +7,8 @@ const CarouselImage = ({ src }) => {
         radius="md"
         src={src}
         h={"100%"}
-        fallbackSrc="https://placehold.co/600x400?text=Placeholder"
+        loading="lazy"
+        fallbackSrc="https://placehold.co/600x400?text=Image"
       />
     </Box>
   );

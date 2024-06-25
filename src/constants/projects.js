@@ -1,5 +1,38 @@
 const projects = [
   {
+    title: "WeatherWise",
+    description:
+      "A simple and user-friendly weather app built with React.js, providing current weather data, hourly forecasts, and daily forecasts using data from the OpenWeatherMap API and Open-Meteo API.",
+    features: [
+      "Displays the current weather conditions for a searched city.",
+      "Shows weather data for the current location",
+      "Provides weather data for the next 24 hours",
+      "Shows weather data for the upcoming days",
+      "Shows the details of the location and a map",
+    ],
+    tags: [
+      "javascript",
+      "reactjs",
+      "Tailwind CSS",
+      "DaisyUI",
+      "mantine-hooks",
+      "leaflet",
+      "react-hot-toast",
+      "axios",
+      "vite",
+    ],
+    links: {
+      demo: "https://weatherwise-react.vercel.app/",
+      github: "https://github.com/dipankarpaul2k/weather-app-react.git",
+    },
+    slug: "weatherwise",
+    images: [
+      
+    ],
+    date: "2024-05-29",
+    pinned: true,
+  },
+  {
     title: "ReAPI Client",
     description:
       "A simple Postman alternative, a popular API testing tool, built using React. This project aims to provide a user-friendly interface for making API requests and visualizing responses.",
@@ -201,3 +234,39 @@ const projects = [
 ];
 
 export default projects;
+
+/*
+{
+    title: "Weather App",
+    description:
+      "A simple and user-friendly weather app built with React.js, providing current weather data, hourly forecasts, and daily forecasts using data from the OpenWeatherMap API and Open-Meteo API.",
+    features: [
+      "Displays the current weather conditions for a searched city.",
+      "Shows weather data for the current location",
+      "Provides weather data for the next 24 hours",
+      "Shows weather data for the upcoming days",
+      "Shows the details of the location and a map",
+    ],
+    tags: [
+      "javascript",
+      "reactjs",
+      "Tailwind CSS",
+      "DaisyUI",
+      "mantine-hooks",
+      "leaflet",
+      "react-hot-toast",
+      "axios",
+      "vite",
+    ],
+    links: {
+      demo: "https://weather-app-built-using-reactjs.vercel.app/",
+      github: "https://github.com/dipankarpaul2k/weather-app-react.git",
+    },
+    slug: "weather-app",
+    images: [
+      
+    ],
+    date: "2024-05-29",
+    pinned: true,
+  },
+*/
