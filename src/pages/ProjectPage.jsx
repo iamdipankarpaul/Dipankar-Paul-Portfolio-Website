@@ -96,7 +96,7 @@ const ProjectPage = () => {
             >
               <SectionTitle
                 text={project.title}
-                baseAs="h3"
+                baseAs="h2"
                 smAs="h2"
                 pyAs={{ base: 0, sm: "xs" }}
               />
@@ -107,7 +107,7 @@ const ProjectPage = () => {
           <Text size="lg">{project.description}</Text>
           {/* features */}
           <Box>
-            <SectionTitle text="Features" baseAs="h4" smAs="h3" />
+            <SectionTitle text="Features" baseAs="h3" smAs="h3" />
             <List
               type="ordered"
               withPadding
@@ -123,7 +123,7 @@ const ProjectPage = () => {
           </Box>
           {/* tags */}
           <Box mb="xs">
-            <SectionTitle text="Technology used" baseAs="h4" smAs="h3" />
+            <SectionTitle text="Technology used" baseAs="h3" smAs="h3" />
             <Flex gap={"3px"} wrap="wrap" mt="xs">
               {project.tags.map((tag) => (
                 <Badge key={tag} variant="light" m="0px">
@@ -134,7 +134,7 @@ const ProjectPage = () => {
           </Box>
           {/* links */}
           <Box>
-            <SectionTitle text="Links" baseAs="h4" smAs="h3" />
+            <SectionTitle text="Links" baseAs="h3" smAs="h3" />
             <SimpleGrid maw="400px" cols={2} mt="xs">
               {/* github link */}
               <Button
