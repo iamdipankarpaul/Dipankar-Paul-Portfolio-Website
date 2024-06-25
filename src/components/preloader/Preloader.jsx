@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { Box, Title, Center } from "@mantine/core";
 import { useElementSize, useMergedRef } from "@mantine/hooks";
 import gsap from "gsap";
@@ -25,19 +25,19 @@ function Preloader({ setLoading }) {
 
     const tl = gsap.timeline();
     tl.to(progressRef.current, {
-      duration: 1,
+      duration: 2,
       width: `${randomStop * 100}%`,
     });
     tl.to(progressRef.current, {
-      duration: 1,
+      duration: 1.5,
       width: "100%",
     });
-    tl.to(progressBarRef.current, {
-      duration: 1,
-      opacity: 0,
-    });
+    // tl.to(progressBarRef.current, {
+    //   duration: 1,
+    //   opacity: 0,
+    // });
     tl.to(preloaderRef.current, {
-      duration: 0.5,
+      duration: 1,
       height: 0,
       onComplete: () => {
         setLoading(false);
@@ -72,6 +72,9 @@ function Preloader({ setLoading }) {
             ref={mergedProgressBarRef}
             className={styles.progress_bar}
             aria-label="pre-loader progress bar"
+            style={{
+              visibility: "hidden",
+            }}
           >
             <Box
               w={0}
