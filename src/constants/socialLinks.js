@@ -21,7 +21,7 @@ const socialLinks = [
   },
   {
     id: randomId(),
-    to: "https://github.com/dipankarpaul2k",
+    to: "https://github.com/iamdipankarpaul",
     label: "GitHub",
     leftIcon: GithubLogo,
     rightIcon: ArrowUpRight,
@@ -30,7 +30,7 @@ const socialLinks = [
   },
   {
     id: randomId(),
-    to: "https://codepen.io/dipankarpaul2k",
+    to: "https://codepen.io/iamdipankarpaul",
     label: "CodePen",
     leftIcon: CodepenLogo,
     rightIcon: ArrowUpRight,
@@ -39,7 +39,7 @@ const socialLinks = [
   },
   {
     id: randomId(),
-    to: "https://dev.to/dipankarpaul",
+    to: "https://dev.to/iamdipankarpaul",
     label: "Dev.to",
     leftIcon: DevToLogo,
     rightIcon: ArrowUpRight,

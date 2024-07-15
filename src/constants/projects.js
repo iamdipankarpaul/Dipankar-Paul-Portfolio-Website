@@ -22,7 +22,7 @@ const projects = [
     ],
     links: {
       demo: "https://newsly-react-app.vercel.app/",
-      github: "https://github.com/dipankarpaul2k/persist-venture-assignment-react-news-app.git",
+      github: "https://github.com/iamdipankarpaul/Newsly-react-news-app.git",
     },
     slug: "newsly",
     images: [
@@ -60,7 +60,7 @@ const projects = [
     ],
     links: {
       demo: "https://weatherwise-react.vercel.app/",
-      github: "https://github.com/dipankarpaul2k/weather-app-react.git",
+      github: "https://github.com/iamdipankarpaul/weather-app-react.git",
     },
     slug: "weatherwise",
     images: [
@@ -99,7 +99,7 @@ const projects = [
     ],
     links: {
       demo: "https://reapi-client.vercel.app/",
-      github: "https://github.com/dipankarpaul2k/ReAPI_Client.git",
+      github: "https://github.com/iamdipankarpaul/ReAPI_Client.git",
     },
     slug: "reapi-client",
     images: [
@@ -133,7 +133,7 @@ const projects = [
     ],
     links: {
       demo: "https://retube-nine.vercel.app/",
-      github: "https://github.com/dipankarpaul2k/jsm_youtube_clone.git",
+      github: "https://github.com/iamdipankarpaul/jsm_youtube_clone.git",
     },
     slug: "retube",
     images: [
@@ -165,7 +165,7 @@ const projects = [
     ],
     links: {
       demo: "https://wordinary-sigma.vercel.app/",
-      github: "https://github.com/dipankarpaul2k/Wordinary.git",
+      github: "https://github.com/iamdipankarpaul/Wordinary.git",
     },
     slug: "wordinary",
     images: [
@@ -192,7 +192,7 @@ const projects = [
     tags: ["javascript", "reactjs", "react router dom"],
     links: {
       demo: "https://homebudget-react.vercel.app/",
-      github: "https://github.com/dipankarpaul2k/Budget_App_React.git",
+      github: "https://github.com/iamdipankarpaul/Budget_App_React.git",
     },
     slug: "homebudget",
     images: [
@@ -218,7 +218,7 @@ const projects = [
     tags: ["html", "css", "javascript"],
     links: {
       demo: "https://password-generator-tau-ochre.vercel.app/",
-      github: "https://github.com/dipankarpaul2k/Password-Generator.git",
+      github: "https://github.com/iamdipankarpaul/Password-Generator.git",
     },
     slug: "password-generator",
     images: [
@@ -240,7 +240,7 @@ const projects = [
     tags: ["html", "css", "javascript"],
     links: {
       demo: "https://text-to-speech-cyan-six.vercel.app/",
-      github: "https://github.com/dipankarpaul2k/Text-to-Speech.git",
+      github: "https://github.com/iamdipankarpaul/Text-to-Speech.git",
     },
     slug: "text-to-speech-app",
     images: [
@@ -262,7 +262,7 @@ const projects = [
     links: {
       demo: "https://cynthia-ugwu-landing-page-clone.vercel.app/",
       github:
-        "https://github.com/dipankarpaul2k/Cynthia-Ugwu-Landing-Page-Clone.git",
+        "https://github.com/iamdipankarpaul/Cynthia-Ugwu-Landing-Page-Clone.git",
     },
     slug: "cynthia-ugwu-website-clone",
     images: [
@@ -301,7 +301,7 @@ export default projects;
     ],
     links: {
       demo: "https://newsly-react-app.vercel.app/",
-      github: "https://github.com/dipankarpaul2k/persist-venture-assignment-react-news-app.git",
+      github: "https://github.com/iamdipankarpaul/persist-venture-assignment-react-news-app.git",
     },
     slug: "newsly",
     images: [
