@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -22,7 +22,7 @@ const CustomCursor = () => {
 
       if (cursorStyle === "pointer") {
         gsap.to(cursor, {
-          scale: 2,
+          scale: 3,
           duration: 0.3,
         });
       } else {

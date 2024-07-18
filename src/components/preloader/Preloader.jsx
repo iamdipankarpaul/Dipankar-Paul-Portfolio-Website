@@ -8,7 +8,8 @@ import { useGSAP } from "@gsap/react";
 import styles from "./Preloader.module.css";
 
 function Preloader({ setLoading }) {
-  const preloaderRef = useRef(null);
+  // get the refs
+  const preloaderBodyRef = useRef(null);
   const progressBarRef = useRef(null);
   const progressRef = useRef(null);
 
@@ -16,7 +17,7 @@ function Preloader({ setLoading }) {
   const { ref: progressBarSizeRef, width: progressBarWidth } = useElementSize();
   const { ref: progressSizeRef, width: progressWidth } = useElementSize();
 
-  // marge hooks
+  // marge refs
   const mergedProgressBarRef = useMergedRef(progressBarRef, progressBarSizeRef);
   const mergedProgressRef = useMergedRef(progressRef, progressSizeRef);
 
@@ -24,19 +25,19 @@ function Preloader({ setLoading }) {
     const randomStop = Math.random() * (0.8 - 0.3) + 0.3;
 
     const tl = gsap.timeline();
+
     tl.to(progressRef.current, {
-      duration: 1.5,
+      duration: 1,
       width: `${randomStop * 100}%`,
     });
+
     tl.to(progressRef.current, {
       duration: 1.5,
       width: "100%",
     });
-    // tl.to(progressBarRef.current, {
-    //   duration: 1,
-    //   opacity: 0,
-    // });
-    tl.to(preloaderRef.current, {
+
+    tl.to(preloaderBodyRef.current, {
+      delay: 0.5,
       duration: 1,
       height: 0,
       onComplete: () => {
@@ -53,43 +54,45 @@ function Preloader({ setLoading }) {
       : `Welcome to my portfolio`;
 
   return (
-    <Box
-      w="100%"
-      h="100dvh"
-      ref={preloaderRef}
-      className={styles.preloader}
-      aria-label="pre-loader component"
-    >
-      <Box ta="center" w="100%">
-        <Title fz={{ base: "h2", sm: "h1" }} mb={20}>
-          {displayText}
-        </Title>
-        <Center>
-          <Box
-            w="30%"
-            miw="200px"
-            h={{ base: "5px", sm: "8px" }}
-            ref={mergedProgressBarRef}
-            className={styles.progress_bar}
-            aria-label="pre-loader progress bar"
-            style={{
-              visibility: "hidden",
-            }}
-          >
+    <>
+      <Box
+        w="100%"
+        h="100dvh"
+        ref={preloaderBodyRef}
+        className={styles.preloaderBody}
+        aria-label="pre-loader component"
+      >
+        <Box ta="center" w="100%">
+          <Title fz={{ base: "h2", sm: "h1" }} mb={20}>
+            {displayText}
+          </Title>
+          <Center>
             <Box
-              w={0}
-              h="100%"
-              ref={mergedProgressRef}
-              className={styles.progress}
-              role="progressbar"
-              aria-valuemin="0"
-              aria-valuemax="100"
-              aria-label="pre-loader progress bar progress"
-            ></Box>
-          </Box>
-        </Center>
+              w="30%"
+              miw="200px"
+              h={{ base: "5px", sm: "8px" }}
+              ref={mergedProgressBarRef}
+              className={styles.progress_bar}
+              aria-label="pre-loader progress bar"
+              style={{
+                visibility: "hidden",
+              }}
+            >
+              <Box
+                w={0}
+                h="100%"
+                ref={mergedProgressRef}
+                className={styles.progress}
+                role="progressbar"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-label="pre-loader progress bar progress"
+              ></Box>
+            </Box>
+          </Center>
+        </Box>
       </Box>
-    </Box>
+    </>
   );
 }
 
