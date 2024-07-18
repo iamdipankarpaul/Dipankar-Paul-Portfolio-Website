@@ -3,7 +3,7 @@ import axios from "axios";
 const fetchBlogs = async () => {
   try {
     const response = await axios.get(
-      `https://dev.to/api/articles?username=dipankarpaul`
+      `https://dev.to/api/articles?username=iamdipankarpaul`
     );
     return response.data.map(
       ({
@@ -29,6 +29,7 @@ const fetchBlogs = async () => {
       })
     );
   } catch (error) {
+    console.error(error);
     throw error;
   }
 };

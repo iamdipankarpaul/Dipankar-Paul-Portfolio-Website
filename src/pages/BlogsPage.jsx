@@ -37,7 +37,7 @@ const BlogsPage = () => {
 
   useEffect(() => {
     scrollIntoView({ alignment: "start" });
-  }, []);
+  }, [scrollIntoView]);
 
   // fetch blogs
   useEffect(() => {
@@ -118,7 +118,7 @@ const BlogsPage = () => {
     <Box className={classes.wrapper} ref={wrapperRef}>
       {/* seo */}
       <Helmet>
-        <title>Dipankar Paul's Blogs</title>
+        <title>Dipankar Paul&apos;s Blogs</title>
         <meta
           name="description"
           content="Explore my journey as a frontend developer and blog writer. Discover my projects, read my tech blogs, and get in touch. Let's connect and create something amazing together!"
@@ -132,16 +132,14 @@ const BlogsPage = () => {
         pb={{ base: 0, sm: "xs" }}
         px={{ base: 0, xs: "xs" }}
       >
-        {/* loading */}
-        {loading && (
+        {/* if blogs loading */}
+        {loading ? (
           <Center>
             <Loader color="blue" size="lg" type="dots" />
           </Center>
-        )}
-
-        {/* error */}
-        {error && (
+        ) : error ? (
           <>
+            {/* if any error */}
             <Center>
               <Box ta="center">
                 <Text my="sm">{error.message}</Text>
@@ -154,12 +152,10 @@ const BlogsPage = () => {
               </Box>
             </Center>
           </>
-        )}
-
-        {/* blog list */}
-        {blogs.length > 0 && (
+        ) : // if blogs fetched successfully
+        blogs.length > 0 ? (
           <>
-            {/* search and sort */}
+            {/* blogs search and sort */}
             <Box>
               <Flex
                 direction={{ base: "column-reverse", sm: "row" }}
@@ -197,6 +193,13 @@ const BlogsPage = () => {
               <BlogList blogs={filteredBlogs} tagClick={handleTagClick} />
             </Box>
           </>
+        ) : (
+          // if blogs not found
+          <Box>
+            <Center mih="60vh">
+              <Text>Blogs Not Found 😔</Text>
+            </Center>
+          </Box>
         )}
       </Box>
     </Box>

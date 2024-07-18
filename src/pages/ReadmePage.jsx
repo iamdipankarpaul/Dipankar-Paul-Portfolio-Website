@@ -19,7 +19,6 @@ import fetchBlogs from "../utils/fetchBlogs";
 
 const ReadmePage = () => {
   const [blogs, setBlogs] = useState([]);
-  const [blogsLoading, setBlogsLoading] = useState(false);
   const [blogsError, setBlogsError] = useState(null);
 
   const pinnedProjects = Object.groupBy(
@@ -30,18 +29,15 @@ const ReadmePage = () => {
   // fetch blogs
   useEffect(() => {
     const fetchData = async () => {
-      setBlogsLoading(true);
       try {
         const blogsData = await fetchBlogs();
         setBlogs([...blogsData.slice(0, 4)]);
-        setBlogsLoading(false);
         setBlogsError(null);
       } catch (error) {
         setBlogsError({
           status: error.response.status,
           message: "Fail to fetch the blogs.",
         });
-        setBlogsLoading(false);
         setBlogs([]);
       }
     };
@@ -116,12 +112,17 @@ const ReadmePage = () => {
             linkText="All Blogs"
             linkTo="/blogs"
           />
-        ) : (
+        ) : blogs.length > 0 ? (
           <ReadmeSection
             titleText={"Letest Blogs"}
             blogList={blogs}
             linkText="All Blogs"
             linkTo="/blogs"
+          />
+        ) : (
+          <ReadmeSection
+            titleText={"Letest Blogs"}
+            bodyContent={"Blogs Not Found 😔"}
           />
         )}
       </Box>
