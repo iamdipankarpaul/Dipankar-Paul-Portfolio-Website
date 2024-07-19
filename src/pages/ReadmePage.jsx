@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Box, Divider, Text, Anchor } from "@mantine/core";
 
@@ -12,37 +11,16 @@ import classes from "./pages.module.css";
 import Topbar from "../components/Topbar";
 import NameAnimation from "../components/NameAnimation";
 import ReadmeSection from "../components/ReadmeSection";
+import ReadmeBlogSection from "../components/blogs/ReadmeBlogSection";
 
-// constants
+// local data
 import personalData from "../constants";
-import fetchBlogs from "../utils/fetchBlogs";
 
 const ReadmePage = () => {
-  const [blogs, setBlogs] = useState([]);
-  const [blogsError, setBlogsError] = useState(null);
-
   const pinnedProjects = Object.groupBy(
     personalData.projects,
     ({ pinned }) => pinned
   );
-
-  // fetch blogs
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const blogsData = await fetchBlogs();
-        setBlogs([...blogsData.slice(0, 4)]);
-        setBlogsError(null);
-      } catch (error) {
-        setBlogsError({
-          status: error.response.status,
-          message: "Fail to fetch the blogs.",
-        });
-        setBlogs([]);
-      }
-    };
-    fetchData();
-  }, []);
 
   return (
     <Box className={classes.wrapper}>
@@ -105,26 +83,7 @@ const ReadmePage = () => {
         />
 
         {/* blogs */}
-        {blogsError ? (
-          <ReadmeSection
-            titleText={"Letest Blogs"}
-            bodyContent="Fail to fetch blogs."
-            linkText="All Blogs"
-            linkTo="/blogs"
-          />
-        ) : blogs.length > 0 ? (
-          <ReadmeSection
-            titleText={"Letest Blogs"}
-            blogList={blogs}
-            linkText="All Blogs"
-            linkTo="/blogs"
-          />
-        ) : (
-          <ReadmeSection
-            titleText={"Letest Blogs"}
-            bodyContent={"Blogs Not Found 😔"}
-          />
-        )}
+        <ReadmeBlogSection />
       </Box>
     </Box>
   );

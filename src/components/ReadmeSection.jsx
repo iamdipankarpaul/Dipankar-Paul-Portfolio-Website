@@ -1,4 +1,4 @@
-import { Box, Text, Divider, SimpleGrid } from "@mantine/core";
+import { Box, Text, Divider } from "@mantine/core";
 import SectionTitle from "./SectionTitle";
 import SkillListSection from "./SkillListSection";
 import ProjectList from "./ProjectList";
