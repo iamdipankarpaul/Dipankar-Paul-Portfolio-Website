@@ -15,6 +15,9 @@ const blogsApi = createApi({
   }),
 });
 
+// Endpoint to fetch individual blog
+// https://dev.to/api/articles/iamdipankarpaul/{slug}
+
 // Export the generated hooks for each endpoint
 export const { useGetBlogListQuery } = blogsApi;
 export default blogsApi;
