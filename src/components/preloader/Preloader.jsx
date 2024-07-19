@@ -37,7 +37,7 @@ function Preloader({ setLoading }) {
     });
 
     tl.to(preloaderBodyRef.current, {
-      delay: 0.5,
+      delay: 1,
       duration: 1,
       height: 0,
       onComplete: () => {
