@@ -9,6 +9,7 @@ import {
   Center,
   Group,
   Loader,
+  Pagination,
 } from "@mantine/core";
 import { useScrollIntoView } from "@mantine/hooks";
 import { Article } from "@phosphor-icons/react";
@@ -16,20 +17,17 @@ import { Helmet } from "react-helmet-async";
 
 import classes from "./pages.module.css";
 
-import waait from "../utils/waait";
-
 import Topbar from "../components/Topbar";
 import BlogList from "../components/blogs/BlogList";
-import fetchBlogs from "../utils/fetchBlogs";
+
+import { useGetBlogListQuery } from "../api/blogsApi";
 
 const BlogsPage = () => {
-  const [loading, setLoading] = useState(false);
-  const [blogs, setBlogs] = useState([]);
-  const [error, setError] = useState(null);
   const [tagOptions, setTagOptions] = useState([]);
   const [selectedTags, setSelectedTags] = useState([]);
   const [sortBy, setSortBy] = useState("Newest");
   const [filteredBlogs, setFilteredBlogs] = useState([]);
+  const [page, setPage] = useState(1);
 
   const { scrollIntoView, targetRef: wrapperRef } = useScrollIntoView({
     offset: 100,
@@ -40,33 +38,24 @@ const BlogsPage = () => {
     scrollIntoView({ alignment: "start" });
   }, [scrollIntoView]);
 
-  // fetch blogs
-  useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      await waait(500);
-      try {
-        const blogsData = await fetchBlogs();
-        setBlogs([...blogsData]);
-        setLoading(false);
-        setError(null);
-      } catch (error) {
-        setError({
-          status: error.response.status,
-          message: "Fail to fetch the blogs.",
-        });
-        setLoading(false);
-        setBlogs([]);
-      }
-    };
-    fetchData();
-  }, []);
+  // Fetch blogs list
+  const {
+    data: blogs,
+    error,
+    isLoading,
+  } = useGetBlogListQuery({
+    limit: 10,
+    page,
+  });
+  // console.log(blogs);
 
-  // update tag options and filtered blogs
+  // update tag options and filtered blogs only if blogs exists
   useEffect(() => {
-    if (blogs.length > 0) {
+    if (blogs?.length > 0) {
       // Update tagOptions
-      setTagOptions(Array.from(new Set(blogs.flatMap((b) => b.tag_list))));
+      setTagOptions(
+        Array.from(new Set(blogs.flatMap((blog) => blog.tag_list)))
+      );
 
       // Update filteredBlogs
       setFilteredBlogs(
@@ -77,24 +66,6 @@ const BlogsPage = () => {
     }
   }, [blogs, selectedTags]);
 
-  // refetch blogs
-  const refetchBlogs = async () => {
-    setLoading(true);
-    try {
-      const blogsData = await fetchBlogs();
-      setBlogs([...blogsData]);
-      setLoading(false);
-      setError(null);
-    } catch (error) {
-      setError({
-        status: error.response.status,
-        message: "Fail to fetch the blogs.",
-      });
-      setLoading(false);
-      setBlogs([]);
-    }
-  };
-
   const handleTagClick = (tag) => {
     if (selectedTags.includes(tag)) {
       setSelectedTags(selectedTags.filter((t) => t !== tag));
@@ -103,6 +74,7 @@ const BlogsPage = () => {
     }
   };
 
+  // Sorting
   if (sortBy === "Newest") {
     filteredBlogs.sort(
       (a, b) =>
@@ -134,65 +106,34 @@ const BlogsPage = () => {
         px={{ base: 0, xs: "xs" }}
       >
         {/* if blogs loading */}
-        {loading ? (
-          <Center>
-            <Loader color="blue" size="lg" type="dots" />
-          </Center>
+        {isLoading ? (
+          <LoadingBlogs />
         ) : error ? (
-          <>
-            {/* if any error */}
-            <Center>
-              <Box ta="center">
-                <Text my="sm">{error.message}</Text>
-                <Group wrap="nowrap">
-                  <Button onClick={refetchBlogs} variant="light">
-                    Try Again
-                  </Button>
-                  <Button>Go Back</Button>
-                </Group>
-              </Box>
-            </Center>
-          </>
+          // if any error
+          <ErrorFetchingBlogs error={error} />
         ) : // if blogs fetched successfully
-        blogs.length > 0 ? (
+        blogs?.length > 0 ? (
           <>
             {/* blogs search and sort */}
-            <Box>
-              <Flex
-                direction={{ base: "column-reverse", sm: "row" }}
-                gap={{ base: "sm", sm: "lg" }}
-                justify="space-between"
-              >
-                <MultiSelect
-                  placeholder="Search or Pick a tag"
-                  data={tagOptions}
-                  searchable
-                  clearable
-                  checkIconPosition="right"
-                  value={selectedTags}
-                  onChange={setSelectedTags}
-                  aria-label="Pick a tag input"
-                  maw={{ base: "auto", sm: "400px" }}
-                  style={{ flex: 1 }}
-                  size="md"
-                />
-                <Select
-                  aria-label="Sort projects by newest or oldest"
-                  data={["Newest", "Oldest"]}
-                  defaultValue="Newest"
-                  allowDeselect={false}
-                  checkIconPosition="right"
-                  value={sortBy}
-                  onChange={setSortBy}
-                  maw={{ base: "auto", sm: "120px" }}
-                  size="md"
-                />
-              </Flex>
-            </Box>
+            <BlogsSearchSort
+              tagOptions={tagOptions}
+              selectedTags={selectedTags}
+              setSelectedTags={setSelectedTags}
+              sortBy={sortBy}
+              setSortBy={setSortBy}
+            />
             {/* bloglist */}
             <Box>
               <BlogList blogs={filteredBlogs} tagClick={handleTagClick} />
             </Box>
+            <Group justify="center">
+              <BlogsPagination
+                page={page}
+                setPage={setPage}
+                filteredBlogs={filteredBlogs}
+                scrollToTop={scrollIntoView}
+              />
+            </Group>
           </>
         ) : (
           // if blogs not found
@@ -208,3 +149,85 @@ const BlogsPage = () => {
 };
 
 export default BlogsPage;
+
+const LoadingBlogs = () => {
+  return (
+    <Center>
+      <Loader color="blue" size="lg" type="dots" />
+    </Center>
+  );
+};
+
+const ErrorFetchingBlogs = ({ error, refetch }) => {
+  return (
+    <Center>
+      <Box ta="center">
+        <Text my="sm">{error?.message}</Text>
+        <Group wrap="nowrap">
+          <Button onClick={refetch} variant="light">
+            Try Again
+          </Button>
+          <Button>Go Back</Button>
+        </Group>
+      </Box>
+    </Center>
+  );
+};
+
+const BlogsSearchSort = ({
+  tagOptions,
+  selectedTags,
+  setSelectedTags,
+  sortBy,
+  setSortBy,
+}) => {
+  return (
+    <Box>
+      <Flex
+        direction={{ base: "column-reverse", sm: "row" }}
+        gap={{ base: "sm", sm: "lg" }}
+        justify="space-between"
+      >
+        <MultiSelect
+          placeholder="Search or Pick a tag"
+          data={tagOptions}
+          searchable
+          clearable
+          checkIconPosition="right"
+          value={selectedTags}
+          onChange={setSelectedTags}
+          aria-label="Pick a tag input"
+          maw={{ base: "auto", sm: "400px" }}
+          style={{ flex: 1 }}
+          size="md"
+        />
+        <Select
+          aria-label="Sort projects by newest or oldest"
+          data={["Newest", "Oldest"]}
+          defaultValue="Newest"
+          allowDeselect={false}
+          checkIconPosition="right"
+          value={sortBy}
+          onChange={setSortBy}
+          maw={{ base: "auto", sm: "120px" }}
+          size="md"
+        />
+      </Flex>
+    </Box>
+  );
+};
+
+const BlogsPagination = ({ page, setPage, filteredBlogs, scrollToTop }) => {
+  return (
+    <Pagination.Root
+      value={page}
+      onChange={setPage}
+      onClick={() => scrollToTop({ alignment: "start" })}
+    >
+      <Group gap={7} mt="xl">
+        <Pagination.Previous />
+        <Pagination.Next disabled={filteredBlogs.length < 10} />
+      </Group>
+    </Pagination.Root>
+  );
+};
