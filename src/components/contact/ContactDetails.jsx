@@ -1,17 +1,19 @@
-import { Box, List, Text, Title } from "@mantine/core";
+import { Box, List, Text } from "@mantine/core";
 import { Envelope, MapPin, Phone } from "@phosphor-icons/react";
 
 import ContactDetailsItem from "./ContactDetailsItem";
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "../SectionTitle";
 
 const ContactDetails = ({ personalData }) => {
   return (
     <Box>
       <SectionTitle text="Get in touch" baseAs="h3" smAs="h2" />
       <Box pl={{ base: 0, sm: "lg" }}>
-        <Text mt="xs" mb='md' fz="lg">
+        <Text mt="xs" mb="md" fz="lg">
           {/* Fill in the form to start a conversation */}
-          Got questions, comments, feedback or just want to connect? Don't hesitate to reach out! You can use the form or email me directly. I'm excited to hear from you!
+          Got questions, comments, feedback or just want to connect? Don&apos;t
+          hesitate to reach out! You can use the form or email me directly.
+          I&apos;m excited to hear from you!
         </Text>
         <List>
           <ContactDetailsItem

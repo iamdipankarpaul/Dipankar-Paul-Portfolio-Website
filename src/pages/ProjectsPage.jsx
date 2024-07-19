@@ -6,9 +6,10 @@ import { Helmet } from "react-helmet-async";
 
 import classes from "./pages.module.css";
 
-import Topbar from "../components/Topbar";
 import personalData from "../constants";
-import ProjectList from "../components/ProjectList";
+
+import Topbar from "../components/Topbar";
+import ProjectList from "../components/projects/ProjectList";
 
 const ProjectsPage = () => {
   const [selectedTags, setSelectedTags] = useState([]);
@@ -21,7 +22,7 @@ const ProjectsPage = () => {
 
   useEffect(() => {
     scrollIntoView({ alignment: "start" });
-  }, []);
+  }, [scrollIntoView]);
 
   const tagOptions = Array.from(
     new Set(personalData.projects.flatMap((project) => project.tags))
@@ -49,7 +50,7 @@ const ProjectsPage = () => {
     <Box className={classes.wrapper} ref={wrapperRef}>
       {/* seo */}
       <Helmet>
-        <title>Dipankar Paul's Projects</title>
+        <title>Dipankar Paul&apos;s Projects</title>
         <meta
           name="description"
           content="Explore a collection of my innovative projects showcasing my skills in frontend development and creative problem-solving. Each project demonstrates my commitment to delivering engaging user experiences and technical excellence."

@@ -10,7 +10,7 @@ const ReadmeBlogSection = () => {
   } = useGetBlogListQuery({
     limit: 4,
   });
-  console.log(blogs);
+  // console.log(blogs);
 
   return (
     <>

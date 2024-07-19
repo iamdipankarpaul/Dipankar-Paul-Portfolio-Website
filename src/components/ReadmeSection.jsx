@@ -1,8 +1,8 @@
 import { Box, Text, Divider } from "@mantine/core";
 import SectionTitle from "./SectionTitle";
 import SkillListSection from "./SkillListSection";
-import ProjectList from "./ProjectList";
-import BlogList from "./BlogList";
+import ProjectList from "./projects/ProjectList";
+import BlogList from "./blogs/BlogList";
 
 const ReadmeSection = ({
   titleText,

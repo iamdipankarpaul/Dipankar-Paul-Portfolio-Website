@@ -6,10 +6,11 @@ import { Helmet } from "react-helmet-async";
 
 import classes from "./pages.module.css";
 
-import Topbar from "../components/Topbar";
-import ContactForm from "../components/ContactForm";
-import ContactDetails from "../components/ContactDetails";
 import personalData from "../constants";
+
+import Topbar from "../components/Topbar";
+import ContactForm from "../components/contact/ContactForm";
+import ContactDetails from "../components/contact/ContactDetails";
 
 const ContactPage = () => {
   const { scrollIntoView, targetRef: wrapperRef } = useScrollIntoView({
@@ -19,7 +20,7 @@ const ContactPage = () => {
 
   useEffect(() => {
     scrollIntoView({ alignment: "start" });
-  }, []);
+  }, [scrollIntoView]);
 
   return (
     <Box className={classes.wrapper} ref={wrapperRef}>

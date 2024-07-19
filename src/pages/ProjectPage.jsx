@@ -17,11 +17,12 @@ import { Helmet } from "react-helmet-async";
 
 import classes from "./pages.module.css";
 
-import personalData from "../constants";
-import Topbar from "../components/Topbar";
-import CarouselImage from "../components/CarouselImage";
-import SectionTitle from "../components/SectionTitle";
 import formatDate from "../utils/formatDate";
+import personalData from "../constants";
+
+import Topbar from "../components/Topbar";
+import CarouselImage from "../components/projects/CarouselImage";
+import SectionTitle from "../components/SectionTitle";
 
 const ProjectPage = () => {
   const [closeWarningAlert, setCloseWarningAlert] = useState(false);
@@ -36,13 +37,13 @@ const ProjectPage = () => {
 
   useEffect(() => {
     scrollIntoView({ alignment: "start" });
-  }, []);
+  }, [scrollIntoView]);
 
   return (
     <Box className={classes.wrapper} ref={wrapperRef}>
       {/* seo */}
       <Helmet>
-        <title>Dipankar Paul's Project - {project.title}</title>
+        <title>Dipankar Paul&apos;s Project - {project.title}</title>
         <meta
           name="description"
           content={`Explore the details and technologies used in my ${project.title} project. Discover the features, showcasing my skills in frontend development and creative problem-solving.`}

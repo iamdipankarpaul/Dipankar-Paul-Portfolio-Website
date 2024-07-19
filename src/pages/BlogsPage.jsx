@@ -16,10 +16,11 @@ import { Helmet } from "react-helmet-async";
 
 import classes from "./pages.module.css";
 
-import Topbar from "../components/Topbar";
-import BlogList from "../components/BlogList";
-import fetchBlogs from "../utils/fetchBlogs";
 import waait from "../utils/waait";
+
+import Topbar from "../components/Topbar";
+import BlogList from "../components/blogs/BlogList";
+import fetchBlogs from "../utils/fetchBlogs";
 
 const BlogsPage = () => {
   const [loading, setLoading] = useState(false);
