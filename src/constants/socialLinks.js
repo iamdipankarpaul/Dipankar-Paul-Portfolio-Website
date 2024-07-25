@@ -48,7 +48,7 @@ const socialLinks = [
   },
   {
     id: randomId(),
-    to: "https://wa.link/0y3avn",
+    to: "https://wa.me/+916296793396",
     label: "WhatsApp",
     leftIcon: WhatsappLogo,
     rightIcon: ArrowUpRight,
