@@ -16,6 +16,15 @@ const AppHeader = ({ opened, toggleNavbar }) => {
     getInitialValueInEffect: true,
   });
 
+  const darkTheme = computedColorScheme === "dark";
+  // console.log(darkTheme);
+
+  const toggleThemeIcon = darkTheme ? (
+    <Sun size={"70%"} color="yellow" />
+  ) : (
+    <MoonStars size={"70%"} />
+  );
+
   return (
     <Group h="100%" px="md" justify="space-between">
       <Title
@@ -31,16 +40,11 @@ const AppHeader = ({ opened, toggleNavbar }) => {
       <Group>
         <Tooltip label="Toggle theme" position="bottom-end">
           <ActionIcon
-            variant="default"
-            onClick={() =>
-              setColorScheme(computedColorScheme === "light" ? "dark" : "light")
-            }
+            variant="outline"
+            color={darkTheme ? "yellow" : "black"}
+            onClick={() => setColorScheme(darkTheme ? "light" : "dark")}
           >
-            {computedColorScheme === "dark" ? (
-              <Sun size={"70%"} />
-            ) : (
-              <MoonStars size={"70%"} />
-            )}
+            {toggleThemeIcon}
           </ActionIcon>
         </Tooltip>
         <Burger
