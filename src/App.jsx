@@ -17,6 +17,7 @@ import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 // theme styles
 import theme, { variableResolver } from "./theme.js";
+import SmoothScrolling from "./components/SmoothScrolling.jsx";
 
 // router configuration
 const router = createBrowserRouter([
@@ -60,7 +61,9 @@ function App() {
       cssVariablesResolver={variableResolver}
     >
       <HelmetProvider>
-        <RouterProvider router={router} />
+        <SmoothScrolling>
+          <RouterProvider router={router} />
+        </SmoothScrolling>
       </HelmetProvider>
     </MantineProvider>
   );
