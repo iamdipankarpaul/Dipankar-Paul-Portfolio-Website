@@ -32,12 +32,12 @@ function Preloader({ setLoading }) {
     });
 
     tl.to(progressRef.current, {
-      duration: 1.5,
+      duration: 1.3,
       width: "100%",
     });
 
     tl.to(preloaderBodyRef.current, {
-      delay: 1,
+      delay: 0.7,
       duration: 1,
       height: 0,
       onComplete: () => {
