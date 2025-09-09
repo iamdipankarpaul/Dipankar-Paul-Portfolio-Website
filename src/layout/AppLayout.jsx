@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import { AppShell, Box, Text } from "@mantine/core";
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
@@ -10,14 +10,14 @@ import AppFooter from "./AppFooter";
 
 // components
 import CustomCursor from "../components/cursor/CustomCursor";
-import Preloader from "../components/preloader/Preloader";
+// import Preloader from "../components/preloader/Preloader";
 
 // constants
 import personalData from "../constants";
 import navLinks from "../constants/navLinks";
 
 const AppLayout = () => {
-  const [preLoading, setPreLoading] = useState(true);
+  // const [preLoading, setPreLoading] = useState(true);
   const [opened, { toggle: toggleNavbar, close: closeNavbar }] =
     useDisclosure();
 
@@ -25,8 +25,9 @@ const AppLayout = () => {
 
   return (
     <>
-      {preLoading && <Preloader setLoading={setPreLoading} />}
-      {!preLoading && isDesktop && <CustomCursor />}
+      {/* {preLoading && <Preloader setLoading={setPreLoading} />} */}
+      {/* {!preLoading && isDesktop && <CustomCursor />} */}
+      {isDesktop && <CustomCursor />}
       <AppShell
         header={{ height: 60 }}
         navbar={{
