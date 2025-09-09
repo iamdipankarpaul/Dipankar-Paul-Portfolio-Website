@@ -13,6 +13,7 @@ const navLinks = [
     to: "/",
     label: "README.md",
     leftIcon: BookOpen,
+    target: "_self",
     ariaLabel: "navigation link to README.md page",
   },
   {
@@ -20,6 +21,7 @@ const navLinks = [
     to: "/projects",
     label: "Projects",
     leftIcon: Folder,
+    target: "_self",
     ariaLabel: "navigation link to projects page",
   },
   {
@@ -27,13 +29,15 @@ const navLinks = [
     to: "https://blog.iamdipankarpaul.com/",
     label: "Blogs",
     leftIcon: Article,
-    ariaLabel: "navigation link to blogs page",
+    target: "_blank",
+    ariaLabel: "navigation link to blogs page. Opens in new tab.",
   },
   {
     id: randomId(),
     to: "/contact",
     label: "Contact Me",
     leftIcon: PaperPlaneTilt,
+    target: "_self",
     ariaLabel: "navigation link to contact page",
   },
 ];
