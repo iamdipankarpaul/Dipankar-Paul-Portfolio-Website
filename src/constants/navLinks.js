@@ -13,28 +13,28 @@ const navLinks = [
     to: "/",
     label: "README.md",
     leftIcon: BookOpen,
-    ariaLabel: "navlink to go to README.md page",
+    ariaLabel: "navigation link to README.md page",
   },
   {
     id: randomId(),
     to: "/projects",
     label: "Projects",
     leftIcon: Folder,
-    ariaLabel: "navlink to go to projects page",
+    ariaLabel: "navigation link to projects page",
   },
   {
     id: randomId(),
-    to: "/blogs",
+    to: "https://blog.iamdipankarpaul.com/",
     label: "Blogs",
     leftIcon: Article,
-    ariaLabel: "navlink to go to blogs page",
+    ariaLabel: "navigation link to blogs page",
   },
   {
     id: randomId(),
     to: "/contact",
     label: "Contact Me",
     leftIcon: PaperPlaneTilt,
-    ariaLabel: "navlink to go to contact page",
+    ariaLabel: "navigation link to contact page",
   },
 ];
 

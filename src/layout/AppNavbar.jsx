@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
 import { Group, Text } from "@mantine/core";
 import classes from "./AppLayout.module.css";
-import { useMediaQuery } from "@mantine/hooks";
+// import { useMediaQuery } from "@mantine/hooks";
 
 const AppNavbar = ({ links, closeNavbar }) => {
-  const isMobile = useMediaQuery("(max-width: 64em)");
+  // const isMobile = useMediaQuery("(max-width: 64em)");
 
   return (
     <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
