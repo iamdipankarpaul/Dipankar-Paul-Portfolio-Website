@@ -3,10 +3,10 @@ import { randomId } from "@mantine/hooks";
 import {
   ArrowUpRight,
   CodepenLogo,
-  DevToLogo,
   GithubLogo,
   LinkedinLogo,
   WhatsappLogo,
+  InstagramLogo,
 } from "@phosphor-icons/react";
 
 const socialLinks = [
@@ -39,12 +39,12 @@ const socialLinks = [
   },
   {
     id: randomId(),
-    to: "https://dev.to/iamdipankarpaul",
-    label: "Dev.to",
-    leftIcon: DevToLogo,
+    to: "https://www.instagram.com/iamdipankarpaul/",
+    label: "Instagram",
+    leftIcon: InstagramLogo,
     rightIcon: ArrowUpRight,
     target: "_blank",
-    ariaLabel: "Dev.to link",
+    ariaLabel: "Instagram link",
   },
   {
     id: randomId(),
