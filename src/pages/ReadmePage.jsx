@@ -10,7 +10,6 @@ import classes from "./pages.module.css";
 import Topbar from "../components/Topbar";
 import NameAnimation from "../components/NameAnimation";
 import ReadmeSection from "../components/ReadmeSection";
-import ReadmeBlogSection from "../components/blogs/ReadmeBlogSection";
 
 // local data
 import personalData from "../constants";
@@ -61,9 +60,6 @@ const ReadmePage = () => {
           linkText="All Projects"
           linkTo="/projects"
         />
-
-        {/* blogs */}
-        <ReadmeBlogSection />
       </Box>
     </Box>
   );
