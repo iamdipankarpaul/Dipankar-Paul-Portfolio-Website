@@ -4,7 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 const NameAnimation = () => {
   return (
     <Group h="50px" align="center" mb={{ base: "md", sm: "lg" }}>
-      <Title fw={500} fz={{ base: "h2", sm: "h1" }}>
+      <Title fw={600} fz={{ base: "h2", sm: "h1" }}>
         {/* 👋 Hello, I'm Dipankar Paul */}
         <TypeAnimation
           sequence={[
