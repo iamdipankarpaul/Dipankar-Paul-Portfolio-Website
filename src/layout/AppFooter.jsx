@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Box, Flex, ActionIcon, Group, Tooltip, Text } from "@mantine/core";
-import { Smiley } from "@phosphor-icons/react";
 
 import classes from "./AppLayout.module.css";
 import personalData from "../constants";
