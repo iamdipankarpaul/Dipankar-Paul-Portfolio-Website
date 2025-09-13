@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { Box, Divider, Text, Anchor } from "@mantine/core";
+import { Box, Divider, Text } from "@mantine/core";
 
 // icon
 import { BookOpen } from "@phosphor-icons/react";
@@ -39,23 +38,7 @@ const ReadmePage = () => {
           </Box>
           <Box pl={{ base: 0, sm: "lg" }}>
             <Divider mb="sm" />
-            <Text fz="xl">
-              Your friendly neighborhood web developer.{" "}
-              <Link to="/contact" className={classes.readme_header_links}>
-                Contact me
-              </Link>{" "}
-              for opportunities or{" "}
-              <Anchor
-                fz="xl"
-                underline="never"
-                href={"https://357429452906074112.hello.cv/"}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                view
-              </Anchor>{" "}
-              my resume.
-            </Text>
+            <Text fz="xl">Your friendly neighborhood web developer.</Text>
           </Box>
         </section>
 
@@ -64,7 +47,7 @@ const ReadmePage = () => {
           titleText={personalData.aboutMe.title}
           bodyContent={personalData.aboutMe.description}
         />
-        
+
         {/* skills */}
         <ReadmeSection
           titleText={personalData.skills.title}

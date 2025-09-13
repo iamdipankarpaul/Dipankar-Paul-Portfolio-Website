@@ -21,7 +21,7 @@ const SectionTitle = ({
       <Flex align="center" ref={ref} gap="5px">
         {!isMobile && <Link size={20} style={{ opacity: hovered ? 1 : 0.2 }} />}
         <Title
-          fw={500}
+          fw={800}
           fz={{ base: baseAs || "h2", sm: smAs || "h1" }}
           py={pyAs || "xs"}
           tt="capitalize"
