@@ -16,7 +16,7 @@ import ContactPage from "./pages/ContactPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 // theme styles
-import theme, { variableResolver } from "./theme.js";
+import theme from "./theme.js";
 import SmoothScrolling from "./components/SmoothScrolling.jsx";
 
 // router configuration
@@ -55,11 +55,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <MantineProvider
-      theme={theme}
-      defaultColorScheme="dark"
-      cssVariablesResolver={variableResolver}
-    >
+    <MantineProvider theme={theme} defaultColorScheme="dark">
       <HelmetProvider>
         <SmoothScrolling>
           <RouterProvider router={router} />
