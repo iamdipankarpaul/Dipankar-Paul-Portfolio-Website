@@ -40,7 +40,7 @@ const ReadmePage = () => {
           <Box pl={{ base: 0, sm: "lg" }}>
             <Divider mb="sm" />
             <Text fz="xl">
-              {personalData.designation}{" "}
+              Your friendly neighborhood web developer.{" "}
               <Link to="/contact" className={classes.readme_header_links}>
                 Contact me
               </Link>{" "}
@@ -48,11 +48,11 @@ const ReadmePage = () => {
               <Anchor
                 fz="xl"
                 underline="never"
-                href={`/${personalData.resume}`}
+                href={"https://357429452906074112.hello.cv/"}
                 target="_blank"
-                // download="Dipankar-Paul-Resume"
+                rel="noopener noreferrer"
               >
-                view/download
+                view
               </Anchor>{" "}
               my resume.
             </Text>
@@ -60,14 +60,11 @@ const ReadmePage = () => {
         </section>
 
         {/* about me */}
-        {personalData.aboutMe.map((about) => (
-          <ReadmeSection
-            key={about.id}
-            titleText={about.title}
-            bodyContent={about.description}
-          />
-        ))}
-
+        <ReadmeSection
+          titleText={personalData.aboutMe.title}
+          bodyContent={personalData.aboutMe.description}
+        />
+        
         {/* skills */}
         <ReadmeSection
           titleText={personalData.skills.title}

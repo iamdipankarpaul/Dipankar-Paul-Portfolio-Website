@@ -7,6 +7,7 @@ import {
   useMantineColorScheme,
   useComputedColorScheme,
   Title,
+  Button,
 } from "@mantine/core";
 import { MoonStars, Sun } from "@phosphor-icons/react";
 
@@ -38,6 +39,15 @@ const AppHeader = ({ opened, toggleNavbar }) => {
         Dipankar Paul
       </Title>
       <Group>
+        <Button
+          component="a"
+          href="https://357429452906074112.hello.cv/"
+          target="_blank"
+          rel="noopener noreferrer"
+          size="compact-md"
+        >
+          Resume
+        </Button>
         <Tooltip label="Toggle theme" position="bottom-end">
           <ActionIcon
             variant="outline"
