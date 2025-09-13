@@ -22,7 +22,7 @@ const AppNavbar = ({ links, closeNavbar }) => {
           >
             <Group gap="xs">
               <item.leftIcon size={24} />
-              <Text span>{item.label}</Text>
+              <Text span fw={600}>{item.label}</Text>
             </Group>
             {item.rightIcon && <item.rightIcon size={16} />}
           </NavLink>
