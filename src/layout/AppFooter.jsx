@@ -17,10 +17,7 @@ const AppFooter = () => {
       >
         {/* footer left text */}
         <Box>
-          <Flex gap={5} align="center">
-            <Text fw={500}>Thanks for visiting!</Text>
-            <Smiley size={20} weight="bold" />
-          </Flex>
+          <Text size="sm">Developed by me, Dipankar Paul.</Text>
         </Box>
 
         {/* social icons */}
@@ -46,7 +43,6 @@ const AppFooter = () => {
 
         {/* footer right text */}
         <Box>
-          <Text size="sm">Developed by me, Dipankar Paul.</Text>
           <Text size="sm">
             &copy;{" "}
             {`Copyright ${new Date().getFullYear()} - All Rights Reserved.`}
