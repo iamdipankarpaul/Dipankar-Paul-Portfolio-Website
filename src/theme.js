@@ -19,7 +19,7 @@ const theme = createTheme({
   },
   autoContrast: true,
   defaultRadius: "md",
-  fontFamily: "Outfit, sans-serif",
+  fontFamily: "Inter, sans-serif",
   headings: { fontFamily: "Space Grotesk, sans-serif" },
 });
 

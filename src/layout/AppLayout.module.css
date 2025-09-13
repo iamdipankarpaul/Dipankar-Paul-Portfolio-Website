@@ -2,13 +2,14 @@
   padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
   border-radius: var(--mantine-radius-md);
   margin-bottom: var(--mantine-spacing-xs);
-  font-weight: 500;
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--mantine-spacing-xs);
   color: light-dark(var(--mantine-color-dark-6), var(--mantine-color-gray-0));
   text-decoration: none;
+  font-family: "Space Grotesk", sans-serif;
 
   @mixin hover {
     background-color: light-dark(
