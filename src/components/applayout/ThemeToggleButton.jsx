@@ -14,21 +14,25 @@ const ThemeToggleButton = () => {
 
   const isDarkTheme = computedColorScheme === "dark";
 
-  const toggleThemeIcon = isDarkTheme ? (
+  const themeToggleIcon = isDarkTheme ? (
     <Sun size={"70%"} color="yellow" />
   ) : (
     <MoonStars size={"70%"} />
   );
 
+  const themeToggleLabel = isDarkTheme
+    ? "You sure you want to do that?"
+    : "Switch to dark mode";
+
   return (
     <>
-      <Tooltip label="Toggle theme ndndjbdc" position="bottom-end">
+      <Tooltip label={themeToggleLabel} position="bottom-end">
         <ActionIcon
           variant="outline"
           color={isDarkTheme ? "yellow" : "black"}
           onClick={() => setColorScheme(isDarkTheme ? "light" : "dark")}
         >
-          {toggleThemeIcon}
+          {themeToggleIcon}
         </ActionIcon>
       </Tooltip>
     </>
