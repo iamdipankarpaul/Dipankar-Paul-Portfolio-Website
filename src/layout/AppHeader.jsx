@@ -1,31 +1,8 @@
 import { Link } from "react-router-dom";
-import {
-  ActionIcon,
-  Burger,
-  Group,
-  Tooltip,
-  useMantineColorScheme,
-  useComputedColorScheme,
-  Title,
-  Button,
-} from "@mantine/core";
-import { MoonStars, Sun } from "@phosphor-icons/react";
+import { Burger, Group, Title, Button } from "@mantine/core";
+import ThemeToggleButton from "../components/applayout/ThemeToggleButton";
 
 const AppHeader = ({ opened, toggleNavbar }) => {
-  const { setColorScheme } = useMantineColorScheme();
-  const computedColorScheme = useComputedColorScheme("dark", {
-    getInitialValueInEffect: true,
-  });
-
-  const darkTheme = computedColorScheme === "dark";
-  // console.log(darkTheme);
-
-  const toggleThemeIcon = darkTheme ? (
-    <Sun size={"70%"} color="yellow" />
-  ) : (
-    <MoonStars size={"70%"} />
-  );
-
   return (
     <Group h="100%" px="md" justify="space-between">
       <Title
@@ -48,15 +25,9 @@ const AppHeader = ({ opened, toggleNavbar }) => {
         >
           Resume
         </Button>
-        <Tooltip label="Toggle theme" position="bottom-end">
-          <ActionIcon
-            variant="outline"
-            color={darkTheme ? "yellow" : "black"}
-            onClick={() => setColorScheme(darkTheme ? "light" : "dark")}
-          >
-            {toggleThemeIcon}
-          </ActionIcon>
-        </Tooltip>
+
+        <ThemeToggleButton />
+
         <Burger
           opened={opened}
           onClick={toggleNavbar}
