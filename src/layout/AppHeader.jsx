@@ -13,7 +13,7 @@ const AppHeader = ({ opened, toggleNavbar }) => {
         style={{ color: "var(--mantine-color-text)" }}
         td="none"
       >
-        DP.
+        Dipankar Paul
       </Title>
       <Group>
         <Button
