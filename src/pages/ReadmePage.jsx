@@ -39,7 +39,7 @@ const ReadmePage = () => {
             <Divider mb="sm" />
             <Text fz={"xl"}>
               Your friendly neighborhood{" "}
-              <Text span fz={"xl"} c={"yellow"}>
+              <Text span fz={"xl"} c={"blue"}>
                 web developer.
               </Text>
             </Text>
