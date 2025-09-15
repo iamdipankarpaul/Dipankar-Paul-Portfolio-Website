@@ -7,18 +7,11 @@ import {
   LinkedinLogo,
   WhatsappLogo,
   InstagramLogo,
+  XLogo,
+  At,
 } from "@phosphor-icons/react";
 
 const socialLinks = [
-  {
-    id: randomId(),
-    to: "https://www.linkedin.com/in/iamdipankarpaul/",
-    label: "LinkedIn",
-    leftIcon: LinkedinLogo,
-    rightIcon: ArrowUpRight,
-    target: "_blank",
-    ariaLabel: "Linkedin link",
-  },
   {
     id: randomId(),
     to: "https://github.com/iamdipankarpaul",
@@ -27,6 +20,15 @@ const socialLinks = [
     rightIcon: ArrowUpRight,
     target: "_blank",
     ariaLabel: "Github link",
+  },
+  {
+    id: randomId(),
+    to: "https://www.linkedin.com/in/iamdipankarpaul/",
+    label: "LinkedIn",
+    leftIcon: LinkedinLogo,
+    rightIcon: ArrowUpRight,
+    target: "_blank",
+    ariaLabel: "Linkedin link",
   },
   {
     id: randomId(),
@@ -48,12 +50,30 @@ const socialLinks = [
   },
   {
     id: randomId(),
+    to: "https://x.com/imdipankarpaul",
+    label: "X",
+    leftIcon: XLogo,
+    rightIcon: ArrowUpRight,
+    target: "_blank",
+    ariaLabel: "X link",
+  },
+  {
+    id: randomId(),
     to: "https://wa.me/+916296793396",
     label: "WhatsApp",
     leftIcon: WhatsappLogo,
     rightIcon: ArrowUpRight,
     target: "_blank",
     ariaLabel: "Whatsapp link",
+  },
+  {
+    id: randomId(),
+    to: "mailto:dipankarpaul.dev@gmail.com",
+    label: "Email",
+    leftIcon: At,
+    rightIcon: ArrowUpRight,
+    target: "_blank",
+    ariaLabel: "Email link",
   },
 ];
 
