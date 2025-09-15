@@ -43,8 +43,7 @@ const AppFooter = () => {
         {/* footer right text */}
         <Box>
           <Text size="sm">
-            &copy;{" "}
-            {`Copyright ${new Date().getFullYear()} - All Rights Reserved.`}
+            {`Copyright © ${new Date().getFullYear()} - All Rights Reserved.`}
           </Text>
         </Box>
       </Flex>

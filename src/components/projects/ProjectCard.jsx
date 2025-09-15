@@ -1,10 +1,7 @@
 import { Card, Group, Text, Badge, Flex } from "@mantine/core";
-import { useHover } from "@mantine/hooks";
 import { Link } from "react-router-dom";
 
 const ProjectCard = ({ project, tagClick }) => {
-  const { hovered, ref: projectTitleref } = useHover();
-
   return (
     <Card shadow="md" padding="md" withBorder>
       {/* card heading */}
@@ -19,9 +16,7 @@ const ProjectCard = ({ project, tagClick }) => {
             whiteSpace: "nowrap",
             overflow: "hidden",
             textOverflow: "ellipsis",
-            textDecoration: hovered ? "underline" : "none",
           }}
-          ref={projectTitleref}
           c="blue"
         >
           {project.title}
