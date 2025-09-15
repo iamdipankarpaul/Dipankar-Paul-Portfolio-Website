@@ -1,4 +1,4 @@
-import { Box, Divider, Text } from "@mantine/core";
+import { Box, Divider } from "@mantine/core";
 
 // icon
 import { BookOpen } from "@phosphor-icons/react";
@@ -13,6 +13,7 @@ import ReadmeSection from "../components/ReadmeSection";
 
 // local data
 import personalData from "../constants";
+import HighlightedText from "../components/HighlightedText";
 
 const ReadmePage = () => {
   const pinnedProjects = Object.groupBy(
@@ -37,7 +38,10 @@ const ReadmePage = () => {
           </Box>
           <Box pl={{ base: 0, sm: "lg" }}>
             <Divider mb="sm" />
-            <Text fz="xl">Your friendly neighborhood web developer.</Text>
+            <HighlightedText
+              text="Your friendly neighborhood web developer."
+              highlights={["web developer"]}
+            />
           </Box>
         </section>
 
