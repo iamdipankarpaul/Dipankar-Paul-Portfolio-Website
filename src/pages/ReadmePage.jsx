@@ -37,9 +37,9 @@ const ReadmePage = () => {
           </Box>
           <Box pl={{ base: 0, sm: "lg" }}>
             <Divider mb="sm" />
-            <Text fz={"lg"}>
+            <Text fz={"xl"}>
               Your friendly neighborhood{" "}
-              <Text span fz={"lg"} c={"yellow"}>
+              <Text span fz={"xl"} c={"yellow"}>
                 web developer.
               </Text>
             </Text>
