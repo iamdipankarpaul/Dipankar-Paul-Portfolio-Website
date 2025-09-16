@@ -6,10 +6,7 @@ const personalData = {
   name: "Dipankar Paul",
   designation: "A Frontend Developer and Blog Writer.",
   email: "dipankarpaul.dev@gmail.com",
-  phone: {
-    countryCode: "91",
-    mobileNumber: "6296793396",
-  },
+  phoneNumber: "+91-7407725686",
   aboutMe: {
     title: "What I Do",
     description:

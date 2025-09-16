@@ -23,8 +23,8 @@ const ContactDetails = ({ personalData }) => {
           />
           <ContactDetailsItem
             listIcon={<Phone size={"70%"} weight="fill" />}
-            href={`tel:${personalData.phone.mobileNumber}`}
-            label={personalData.phone.mobileNumber}
+            href={`https://wa.me/+917407725686`}
+            label={personalData.phoneNumber}
           />
           <ContactDetailsItem
             listIcon={<Envelope size={"70%"} weight="fill" />}
