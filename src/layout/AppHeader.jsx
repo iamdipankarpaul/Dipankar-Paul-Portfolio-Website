@@ -2,22 +2,26 @@ import { Link } from "react-router-dom";
 import { Burger, Group, Title, Button } from "@mantine/core";
 import ThemeToggleButton from "../components/applayout/ThemeToggleButton";
 import { useMediaQuery } from "@mantine/hooks";
+import StoryButton from "../components/storyviewer/StoryButton";
 
 const AppHeader = ({ opened, toggleNavbar }) => {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
   return (
     <Group h="100%" px="md" justify="space-between">
-      <Title
-        fz="h2"
-        fw="700"
-        component={Link}
-        to={"/"}
-        style={{ color: "var(--mantine-color-text)" }}
-        td="none"
-      >
-        {isMobile ? "DP." : "Dipankar Paul"}
-      </Title>
+      <Group gap={"xs"}>
+        <StoryButton />
+        <Title
+          fz="h2"
+          fw="700"
+          component={Link}
+          to={"/"}
+          style={{ color: "var(--mantine-color-text)" }}
+          td="none"
+        >
+          {isMobile ? "DP." : "Dipankar Paul"}
+        </Title>
+      </Group>
       <Group>
         <Button
           component="a"
