@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import { Burger, Group, Title, Button } from "@mantine/core";
 import ThemeToggleButton from "../components/applayout/ThemeToggleButton";
+import { useMediaQuery } from "@mantine/hooks";
 
 const AppHeader = ({ opened, toggleNavbar }) => {
+  const isMobile = useMediaQuery("(max-width: 768px)");
+
   return (
     <Group h="100%" px="md" justify="space-between">
       <Title
@@ -13,7 +16,7 @@ const AppHeader = ({ opened, toggleNavbar }) => {
         style={{ color: "var(--mantine-color-text)" }}
         td="none"
       >
-        Dipankar Paul
+        {isMobile ? "DP." : "Dipankar Paul"}
       </Title>
       <Group>
         <Button
