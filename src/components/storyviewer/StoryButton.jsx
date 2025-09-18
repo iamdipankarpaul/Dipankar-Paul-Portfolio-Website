@@ -15,7 +15,7 @@ const sampleStories = [
   {
     id: randomId(),
     type: "image",
-    content: "/serene-mountain-landscape-with-clouds.jpg",
+    content: "/story/peaceful-forest-with-soft-sunlight.jpg",
     caption: "City lights at night are magical ✨",
     altText: "Modern city skyline at night with illuminated buildings",
   },
@@ -29,7 +29,7 @@ const sampleStories = [
   {
     id: randomId(),
     type: "image",
-    content: "/serene-mountain-landscape-with-clouds.jpg",
+    content: "/story/peaceful-lavender-field-in-bloom.jpg",
     caption: "City lights at night are magical ✨",
     altText: "Modern city skyline at night with illuminated buildings",
   },
@@ -43,7 +43,7 @@ const sampleStories = [
   {
     id: randomId(),
     type: "image",
-    content: "/serene-mountain-landscape-with-clouds.jpg",
+    content: "/story/serene-mountain-landscape-with-clouds.jpg",
     caption: "City lights at night are magical ✨",
     altText: "Modern city skyline at night with illuminated buildings",
   },
