@@ -36,8 +36,6 @@
   top: 1.5rem;
   right: 1rem;
   z-index: 20;
-  /* padding: 0.5rem;
-  color: white; */
   border-radius: 9999px;
   background-color: transparent;
   transition: background-color 0.2s ease;
@@ -46,51 +44,6 @@
 
 .closeButton:hover {
   background-color: rgba(255, 255, 255, 0.2);
-}
-
-.leftNavWrapper {
-  display: none;
-}
-
-.rightNavWrapper {
-  display: none;
-}
-
-/* Show nav buttons on desktop only */
-@media (min-width: 768px) {
-  .leftNavWrapper,
-  .rightNavWrapper {
-    display: block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-  }
-  .leftNavWrapper {
-    left: -5rem;
-  }
-  .rightNavWrapper {
-    right: -5rem;
-  }
-}
-
-.navButton {
-  padding: 0.5rem;
-  border-radius: 9999px;
-  transition: background-color 0.2s ease;
-}
-
-.navActive {
-  color: white;
-}
-
-.navActive:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.navDisabled {
-  color: rgba(255, 255, 255, 0.3);
-  cursor: not-allowed;
 }
 
 .storyContentWrapper {
