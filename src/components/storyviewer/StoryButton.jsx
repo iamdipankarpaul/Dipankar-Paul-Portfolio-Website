@@ -16,7 +16,7 @@ const sampleStories = [
     id: randomId(),
     type: "image",
     content: "/story/peaceful-forest-with-soft-sunlight.jpg",
-    caption: "City lights at night are magical ✨",
+    caption: "A peaceful forest with soft sunlight.",
     altText: "Modern city skyline at night with illuminated buildings",
   },
   {
@@ -29,8 +29,8 @@ const sampleStories = [
   {
     id: randomId(),
     type: "image",
-    content: "/story/peaceful-lavender-field-in-bloom.jpg",
-    caption: "City lights at night are magical ✨",
+    content: "/story/serene-mountain-landscape-with-clouds.jpg",
+    caption: "Serene mountain landscape with clouds.",
     altText: "Modern city skyline at night with illuminated buildings",
   },
   {
@@ -40,18 +40,7 @@ const sampleStories = [
     backgroundColor: "#ff0080ff",
     textColor: "#ffffff",
   },
-  {
-    id: randomId(),
-    type: "image",
-    content: "/story/serene-mountain-landscape-with-clouds.jpg",
-    caption: "City lights at night are magical ✨",
-    altText: "Modern city skyline at night with illuminated buildings",
-  },
 ];
-
-// public\story\peaceful-forest-with-soft-sunlight.jpg
-// public\story\peaceful-lavender-field-in-bloom.jpg
-// public\story\serene-mountain-landscape-with-clouds.jpg
 
 export default function StoryButton() {
   const [opened, { open, close }] = useDisclosure(false);
